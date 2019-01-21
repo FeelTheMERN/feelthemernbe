@@ -5,3 +5,13 @@ Content-Type: application/json
     "username": "johnsmith",
     "password": "password"
 }
+
+###
+
+GET http://localhost:5000/admin/users
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG5zbWl0aCIsImlhdCI6MTU0ODEwODgwMiwiZXhwIjoxNTQ4MTEyNDAyfQ.iaHSDgH39YuOVnr_dFb5lGQ9pYJBkRdPkqbfSyz77aA
+
+###
+
+GET http://localhost:5000/admin/users/5c45259d757c6e34eb703a76
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG5zbWl0aCIsImlhdCI6MTU0ODEwODgwMiwiZXhwIjoxNTQ4MTEyNDAyfQ.iaHSDgH39YuOVnr_dFb5lGQ9pYJBkRdPkqbfSyz77aA
