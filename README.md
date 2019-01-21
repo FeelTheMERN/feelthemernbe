@@ -90,3 +90,4 @@ There is to be no confidentiality agreement to be entered into.
 * Express
 * Nodemon
 * Mongoose
+* JWT
