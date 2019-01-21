@@ -16,6 +16,9 @@ db.once('open', () => {
     console.log('Connected to mongoDB')
 })
 
+// Body parser
+app.use(express.json())
+
 // Looks for the index.js in the controllers folder
 app.use(require('./controllers'))
 

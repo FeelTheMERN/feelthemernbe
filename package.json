@@ -20,6 +20,7 @@
   "homepage": "https://github.com/FeelTheMERN/feelthemernbe#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.4.5"
   },
   "devDependencies": {
