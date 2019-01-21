@@ -6,6 +6,7 @@ const db = mongoose.connection
 
 const port = 5000
 
+// Connecting to MongoDB
 mongoose.connect('mongodb://localhost:27017/finalProject')
 
 db.on('error', () => {

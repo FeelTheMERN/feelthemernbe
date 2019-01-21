@@ -1,5 +1,11 @@
 const mongoose = require('mongoose')
 
-const adminSchema = new mongoose.Schema({})
+// Data format
+const adminSchema = new mongoose.Schema({
+    username: String,
+    password: String,
+    email: String,
+    contactNumber: String
+})
 
 module.exports = mongoose.model('Admin', adminSchema)
