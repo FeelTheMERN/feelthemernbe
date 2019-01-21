@@ -84,3 +84,8 @@ Your Educators will act as the client for these projects.
 When approaching your client, be upfront about this being a project you are doing as part of your Diploma.
 There is to be no expectations on you, the students, to deploy the application for use of the client. Make sure the client is aware of this and that it is agreed upon.
 There is to be no confidentiality agreement to be entered into.
+
+# Packages
+
+* Express
+* Nodemon
