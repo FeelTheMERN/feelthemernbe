@@ -16,6 +16,8 @@ router.post('/', (req, res) => {
             
             // Generate token and send to front-end
             const token = authentication.generateToken(doc)
+
+            // Sending token as response
             res.send({
                 token,
                 isAdmin: true
@@ -23,7 +25,7 @@ router.post('/', (req, res) => {
         })
 })
 
-// GET request that returns all the users
+// GET request that returns all users
 router.get('/users', authentication.isAuthenticated, (req, res) => {
     User.find({})
         .then(docs => res.send(docs))
@@ -32,10 +34,9 @@ router.get('/users', authentication.isAuthenticated, (req, res) => {
 // GET request for individual user
 router.get('/users/:id', authentication.isAuthenticated, (req, res) => {
     const { id } = req.params
+    
     User.find({ _id: id})
-        .then(doc => {
-            res.send(doc)
-        })
+        .then(doc => res.send(doc))
 })
 
 module.exports = router
