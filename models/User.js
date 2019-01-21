@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+// Data format
 const userSchema = new mongoose.Schema({
     username: String,
     password: String,
