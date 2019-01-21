@@ -14,11 +14,21 @@ router.post('/login', (req, res) => {
             
             // Generate token and send to front-end
             const token = authentication.generateToken(doc)
+
+            // Sending token as response
             res.send({
                 token,
                 isAdmin: false
             })
         })
+})
+
+// GET request for individual user
+router.get('/users/:id', authentication.isAuthenticated, (req, res) => {
+    const { id } = req.params
+
+    User.findOne({ _id: id })
+        .then(doc => res.send(doc))
 })
 
 module.exports = router

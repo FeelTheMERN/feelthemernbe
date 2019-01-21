@@ -13,6 +13,7 @@ const isAuthenticated = (req, res, next) => {
     next()
 }
 
+// Exporting functions
 module.exports = {
     generateToken,
     isAuthenticated

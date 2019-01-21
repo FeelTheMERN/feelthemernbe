@@ -1,6 +1,5 @@
 const express = require('express')
 const app = new express()
-const router = express.Router() // To use express router
 const mongoose = require('mongoose')
 const db = mongoose.connection
 
