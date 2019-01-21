@@ -22,7 +22,7 @@
     "transactionalHistory": [
         {
             "date": "01.21.2019",
-            "amountRecieved": 200,
+            "amountReceived": 200,
             "pricePerSession": 50,
             "totalSessions": 4
         }
@@ -43,8 +43,8 @@
                 [{"qty": "10", "foodItem": "Beans"},{"qty": "50", "foodItem": "Tofus"} ]
             ],
             "day2": [
-                [{"qty": 5, "foodItem": "Apples"},{"qty": 4, "foodItem": "Pumpkins"} ],
-                [{"qty": 2, "foodItem": "Bananas"},{"qty": 1, "foodItem": "Bread"} ]
+                [{"qty": "5", "foodItem": "Apples"},{"qty": "4", "foodItem": "Pumpkins"} ],
+                [{"qty": "2", "foodItem": "Bananas"},{"qty": "1", "foodItem": "Bread"} ]
             ]
         }
     ]
@@ -72,7 +72,7 @@
     "transactionalHistory": [
         {
             "date": "01.21.2019",
-            "amountRecieved": 100,
+            "amountReceived": 100,
             "pricePerSession": 50,
             "totalSessions": 2
         }

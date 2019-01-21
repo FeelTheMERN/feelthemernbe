@@ -85,7 +85,8 @@ When approaching your client, be upfront about this being a project you are doin
 There is to be no expectations on you, the students, to deploy the application for use of the client. Make sure the client is aware of this and that it is agreed upon.
 There is to be no confidentiality agreement to be entered into.
 
-# Packages
+# Packages BE
 
 * Express
 * Nodemon
+* Mongoose
