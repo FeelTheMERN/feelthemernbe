@@ -1,0 +1,27 @@
+{
+  "name": "feelthemernbe",
+  "version": "1.0.0",
+  "description": "FeelTheMERN Back-End",
+  "main": "api.js",
+  "scripts": {
+    "start": "nodemon api.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FeelTheMERN/feelthemernbe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FeelTheMERN/feelthemernbe/issues"
+  },
+  "homepage": "https://github.com/FeelTheMERN/feelthemernbe#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
