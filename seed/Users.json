@@ -1,0 +1,102 @@
+[
+    {
+    "username": "johnsmith",
+    "password": "password",
+    "contact": {
+        "email": "johnsmith@gmail.com",
+        "contactNumber": "0412 345 678"
+    },
+    "personalAttribute": {
+        "firstName": "John",
+        "lastName": "Smith",
+        "dob": "01.01.1990",
+        "gender": "Male",
+        "height": 172,
+        "weightLog": [92, 85],
+        "goalWeight": 70,
+        "bodyFatLog": [20, 17],
+        "goalBodyFat": 10,
+        "goal": "Lose weight"
+    },
+    "notes": "Low blood pressure",
+    "transactionalHistory": [
+        {
+            "date": "01.21.2019",
+            "amountRecieved": 200,
+            "pricePerSession": 50,
+            "totalSessions": 4
+        }
+    ],
+    "remainingSessions": 3,
+    "sessions": [
+        {
+            "date": "01.22.2019",
+            "time": "22:00",
+            "location": "Moorabin"
+        }
+    ],
+    "dietaryRequirements": ["Vegetarian"],
+    "mealPlans": [
+        {
+            "day1": [
+                [{"qty": "5", "foodItem": "Mushrooms"},{"qty": "2", "foodItem": "Tomatoes"} ],
+                [{"qty": "10", "foodItem": "Beans"},{"qty": "50", "foodItem": "Tofus"} ]
+            ],
+            "day2": [
+                [{"qty": 5, "foodItem": "Apples"},{"qty": 4, "foodItem": "Pumpkins"} ],
+                [{"qty": 2, "foodItem": "Bananas"},{"qty": 1, "foodItem": "Bread"} ]
+            ]
+        }
+    ]
+    },
+    {
+    "username": "janesmith",
+    "password": "password",
+    "contact": {
+        "email": "janesmith@gmail.com",
+        "contactNumber": "0412 345 678"
+    },
+    "personalAttribute": {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "dob": "01.01.1990",
+        "gender": "Female",
+        "height": 152,
+        "weightLog": [65, 63],
+        "goalWeight": 62,
+        "bodyFatLog": [20, 17],
+        "goalBodyFat": 15,
+        "goal": "Lose Weight"
+    },
+    "notes": "",
+    "transactionalHistory": [
+        {
+            "date": "01.21.2019",
+            "amountRecieved": 100,
+            "pricePerSession": 50,
+            "totalSessions": 2
+        }
+    ],
+    "remainingSessions": 1,
+    "sessions": [
+        {
+            "date": "01.22.2019",
+            "time": "09:00",
+            "location": "Moorabin"
+        }
+    ],
+    "dietaryRequirements": [],
+    "mealPlans": [
+        {
+            "day1": [
+                [{"qty": "1", "foodItem": "Chicken breast"},{"qty": "5", "foodItem": "Strawberries"} ],
+                [{"qty": "2", "foodItem": "Yoghurt"},{"qty": "1", "foodItem": "Protein shake"} ]
+            ],
+            "day2": [
+                [{"qty": "1", "foodItem": "Cereal"},{"qty": "2", "foodItem": "Salmon"} ],
+                [{"qty": "1", "foodItem": "Fish"},{"qty": "1", "foodItem": "Avocado"} ]
+            ]
+        }
+    ]
+    }
+]
