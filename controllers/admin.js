@@ -10,37 +10,41 @@ const generateToken = (user) => {
 }
 
 const isAuthenticated = (req, res, next) => {
+    const { token } = req.headers
+    const decoded = jwt.verify(token, 'skyefit')
+    next()
+}
+
+// POST for admin login
+router.post('/', (req, res) => {
     const { username, password } = req.body
     // Finding the user based on username
     User.findOne({ username })
         .then(doc => {
-            if(!doc) {
-                res.status(401).send("Incorrect username or password")
-            }
+            if(!doc) res.status(401).send("Incorrect username or password")
             // If username and password match, we set req.token with the generated token
-            if(doc.password === password) {
-                const token = generateToken(doc)
-                req.token = token
-                next()
-            } else {
-                res.status(401).send("Incorrect username or password")
-            }
+            if(doc.password !== password) res.status(401).send("Incorrect username or password")
+            
+            const token = generateToken(doc)
+            res.send({
+                token,
+                isAdmin: true
+            })
         })
-}
-
-router.use(isAuthenticated)
-
-// POST for admin login
-router.post('/', (req, res) => {
-    // Sending the token to front-end
-    const { token } = req
-    res.send({token})
 })
 
 // GET request that returns all the users
-router.get('/users', (req, res) => {
+router.get('/users', isAuthenticated, (req, res) => {
     User.find({})
         .then(docs => res.send(docs))
+})
+
+router.get('/users/:id', isAuthenticated, (req, res) => {
+    const { id } = req.params
+    User.find({ _id: id})
+        .then(doc => {
+            res.send(doc)
+        })
 })
 
 module.exports = router
