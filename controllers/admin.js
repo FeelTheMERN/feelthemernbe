@@ -3,7 +3,7 @@ const router = express.Router()
 const User = require('../models/User')
 const Admin = require('../models/Admin')
 // Requiring authentication methods from the Utilities directory
-const authentication = require('../Utilities/authentication')
+const { isAuthenticated, generateToken } = require('../Utilities/authentication')
 
 // POST for admin login
 router.post('/', (req, res) => {
@@ -15,7 +15,7 @@ router.post('/', (req, res) => {
             if(!doc || doc.password !== password) res.status(401).send("Incorrect username or password")
             
             // Generate token and send to front-end
-            const token = authentication.generateToken(doc)
+            const token = generateToken(doc)
 
             // Sending token as response
             res.send({
@@ -23,20 +23,23 @@ router.post('/', (req, res) => {
                 isAdmin: true
             })
         })
+        .catch(err => res.send(err))
 })
 
 // GET request that returns all users
-router.get('/users', authentication.isAuthenticated, (req, res) => {
+router.get('/users', isAuthenticated, (req, res) => {
     User.find({})
         .then(docs => res.send(docs))
+        .catch(err => res.send(err))
 })
 
 // GET request for individual user
-router.get('/users/:id', authentication.isAuthenticated, (req, res) => {
+router.get('/users/:id', isAuthenticated, (req, res) => {
     const { id } = req.params
     
-    User.find({ _id: id})
+    User.findOne({ _id: id})
         .then(doc => res.send(doc))
+        .catch(err => res.send(err))
 })
 
 module.exports = router

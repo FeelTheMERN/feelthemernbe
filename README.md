@@ -91,3 +91,6 @@ There is to be no confidentiality agreement to be entered into.
 * Nodemon
 * Mongoose
 * JWT
+* Cloudinary
+* Dotenv
+* Multer
