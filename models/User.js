@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
     personalAttribute: {
         firstName: String,
         lastName: String,
-        DOB: Date,
+        dob: Date,
         gender: String,
         height: Number,
         weightLog: [Number],
