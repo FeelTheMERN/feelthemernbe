@@ -102,8 +102,10 @@ router.post('/users/new', isAuthenticated, (req, res) => {
 
 // POST request that sends back body fat percentage, lean mass and fat mass for males
 router.post('/pinches/male', isAuthenticated, (req, res) => {
+    const { chest, abdomen, thigh, weight } = req.body
+
     // dob needs to be in the following format: 'YYYYMMDD'
-    const { chest, abdomen, thigh, dob, weight } = req.body
+    const dob = req.body.dob.replace(/-/g, '')
 
     const totalPinches = chest + abdomen + thigh
     
@@ -119,13 +121,19 @@ router.post('/pinches/male', isAuthenticated, (req, res) => {
     const fatMass = (weight * percBodyFat) / 100.0
     const leanMass = (weight - fatMass)
     
-    return res.send({percBodyFat, fatMass, leanMass})
+    return res.send({
+        percBodyFat,
+        fatMass,
+        leanMass
+    })
 })
 
 // POST request that sends back body fat percentage, lean mass and fat mass for females
 router.post('/pinches/female', isAuthenticated, (req, res) => {
+    const { triceps, suprailliac, thigh, weight } = req.body
+
     // dob needs to be in the following format: 'YYYYMMDD'
-    const { triceps, suprailliac, thigh, dob, weight } = req.body
+    const dob = req.body.dob.replace(/-/g, '')
 
     const totalPinches = triceps + suprailliac + thigh
     
@@ -141,7 +149,11 @@ router.post('/pinches/female', isAuthenticated, (req, res) => {
     const fatMass = (weight * percBodyFat) / 100.0
     const leanMass = (weight - fatMass)
 
-    return res.send({percBodyFat, fatMass, leanMass})
+    return res.send({
+        percBodyFat,
+        fatMass,
+        leanMass
+    })
 })
 
 module.exports = router
