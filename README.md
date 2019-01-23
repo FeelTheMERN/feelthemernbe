@@ -94,3 +94,4 @@ There is to be no confidentiality agreement to be entered into.
 * Cloudinary
 * Dotenv
 * Multer
+* Cors
