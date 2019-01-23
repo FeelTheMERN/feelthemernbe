@@ -42,4 +42,41 @@ router.get('/users/:id', isAuthenticated, (req, res) => {
         .catch(err => res.send(err))
 })
 
+// POST request for new client
+router.post('/users/new', isAuthenticated, (req, res) => {
+    // Assigning constants from the req.body
+    const {
+        username,
+        password,
+        contact,
+        personalAttribute,
+        notes,
+        transactionalHistory,
+        remainingSession,
+        sessions,
+        dietaryRequirements,
+        mealPlans
+    } = req.body
+    
+    // Making a new user from the constants above
+    const newUser = {
+        username,
+        password,
+        contact,
+        personalAttribute,
+        notes,
+        transactionalHistory,
+        remainingSession,
+        sessions,
+        dietaryRequirements,
+        mealPlans
+    }
+
+    // Creating a new document in users
+    User.create(newUser, err => {
+        if(err) res.status(500).send("User could not be created")
+        res.send(newUser)
+    })
+})
+
 module.exports = router

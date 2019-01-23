@@ -37,9 +37,11 @@ router.get('/users/:id', isAuthenticated, (req, res) => {
         .catch(err => res.send(err))
 })
 
+// Using multer to store memory??
 const storage = multer.memoryStorage()
 const upload = multer({ storage })
 
+// POST request for uploading profile picture
 router.post('/uploadProfilePicture', upload.single('file'), (req, res) => {
     const { buffer } = req.file
     uploadFile(buffer)
