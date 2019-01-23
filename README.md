@@ -95,3 +95,4 @@ There is to be no confidentiality agreement to be entered into.
 * Dotenv
 * Multer
 * Cors
+* Bcrypt
