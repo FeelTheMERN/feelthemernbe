@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const User = require('../models/User')
 const multer = require('multer')
+const bcrypt = require('bcrypt')
 // Requiring authentication methods from the utilities directory
 const { isAuthenticated, generateToken } = require('../Utilities/authentication')
 // Requiring cloudinary methods from the utilities directory
@@ -14,15 +15,20 @@ router.post('/login', (req, res) => {
     User.findOne({ username })
         .then(doc => {
             // Send error if password and username does not match
-            if(!doc || doc.password !== password) res.status(401).send("Incorrect username or password")
+            if(!doc) return res.status(401).send("Incorrect username or password")
             
-            // Generate token and send to front-end
-            const token = generateToken(doc)
+            // Comparing password from login with password from database
+            bcrypt.compare(password, doc.password, (err, response) => {
+                if(!response) return res.status(401).send("Incorrect username or password")
 
-            // Sending token as response
-            res.send({
-                token,
-                isAdmin: false
+                // Generate token and send to front-end
+                const token = generateToken(doc)
+    
+                // Sending token as response
+                return res.send({
+                    token,
+                    isAdmin: false
+                })
             })
         })
         .catch(err => res.send(err))

@@ -3,7 +3,7 @@ const express = require('express')
 const app = new express()
 const mongoose = require('mongoose')
 const db = mongoose.connection
-const cors = require('cors');
+const cors = require('cors')
 
 const port = 5000
 
@@ -22,7 +22,7 @@ db.once('open', () => {
 app.use(express.json())
 
 // Fills in the correct headers to allow access 
-app.use(cors());
+app.use(cors())
 
 // Looks for the index.js in the controllers folder
 app.use(require('./controllers'))
