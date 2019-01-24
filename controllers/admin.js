@@ -130,12 +130,12 @@ router.post('/pinches/male', isAuthenticated, (req, res) => {
 
 // POST request that sends back body fat percentage, lean mass and fat mass for females
 router.post('/pinches/female', isAuthenticated, (req, res) => {
-    const { triceps, suprailliac, thigh, weight, dob } = req.body
+    const { tricep, suprailiac, thigh, weight, dob } = req.body
 
     // dob needs to be in the following format: 'YYYYMMDD'
     const dobFormated = dob.replace(/-/g, '')
 
-    const totalPinches = +triceps + +suprailliac + +thigh
+    const totalPinches = +tricep + +suprailiac + +thigh
     
     // Using moment and dob to calculate age
     const age = moment().diff(moment(dob, 'YYYYMMDD'), 'years')
