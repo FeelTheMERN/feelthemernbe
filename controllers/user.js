@@ -23,11 +23,12 @@ router.post('/login', (req, res) => {
 
                 // Generate token and send to front-end
                 const token = generateToken(doc)
-    
+                console.log(doc)
                 // Sending token as response
                 return res.send({
                     token,
-                    isAdmin: false
+                    isAdmin: false,
+                    id: doc._id
                 })
             })
         })
