@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken')
+const passport = require('passport')
 
 // Create a token if the user is authenticated
 const generateToken = (user) => {
@@ -13,8 +14,17 @@ const isAuthenticated = (req, res, next) => {
     next()
 }
 
+const login = (req, res, next) => {
+    passport.authenticate('local', (err, user, message) => {
+        if(!user) return res.status(403).send(message)
+        req.user = user
+        req.login(user, next)
+    })(req, res, next)
+}
+
 // Exporting functions
 module.exports = {
     generateToken,
-    isAuthenticated
+    isAuthenticated,
+    login
 }
