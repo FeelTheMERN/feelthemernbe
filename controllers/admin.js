@@ -1,60 +1,33 @@
 const express = require('express')
 const router = express.Router()
 const User = require('../models/User')
-const Admin = require('../models/Admin')
 const bcrypt = require('bcrypt')
 const moment = require('moment')
+const passport = require('passport')
+const LocalStrategy = require('passport-local').Strategy
 // Requiring authentication methods from the Utilities directory
-const { isAuthenticated, generateToken } = require('../Utilities/authentication')
+const { isAuthenticated } = require('../Utilities/authentication')
 
-// POST for admin login
-router.post('/', (req, res) => {
-    const { username, password } = req.body
-    // Finding the user based on username
-    Admin.findOne({ username })
-        .then(doc => {
-            // Send error if password and username does not match
-            if(!doc) return res.status(401).send("Incorrect username or password")
-            
-            // Comparing password from login with password from database
-            bcrypt.compare(password, doc.password, (err, response) => {
-                if(!response) return res.status(401).send("Incorrect username or password")
-
-                // Generate token and send to front-end
-                const token = generateToken(doc)
-    
-                // Sending token as response
-                return res.send({
-                    token,
-                    isAdmin: true,
-                    sessions: doc.sessions
-                })
-            })
-        })
-        .catch(err => res.send({
-            err,
-            message: "You are not admin"
-        }))
-})
+router.use(isAuthenticated)
 
 // GET request that returns all users
-router.get('/users', isAuthenticated, (req, res) => {
+router.get('/users', (req, res) => {
     User.find({})
-        .then(docs => res.send(docs))
+        .then(users => res.send(users))
         .catch(err => res.send(err))
 })
 
 // GET request for individual user
-router.get('/users/:id', isAuthenticated, (req, res) => {
+router.get('/users/:id', (req, res) => {
     const { id } = req.params
     
     User.findOne({ _id: id})
-        .then(doc => res.send(doc))
+        .then(user => res.send(user))
         .catch(err => res.send(err))
 })
 
 // POST request for new client
-router.post('/users/new', isAuthenticated, (req, res) => {
+router.post('/users/new', (req, res) => {
     
     // Assigning constants from the req.body
     const {
@@ -101,7 +74,7 @@ router.post('/users/new', isAuthenticated, (req, res) => {
 })
 
 // POST request that sends back body fat percentage, lean mass and fat mass for males
-router.post('/pinches/male', isAuthenticated, (req, res) => {
+router.post('/pinches/male', (req, res) => {
     const { chest, abdomen, thigh, weight, dob } = req.body
 
     // dob needs to be in the following format: 'YYYYMMDD'
@@ -129,7 +102,7 @@ router.post('/pinches/male', isAuthenticated, (req, res) => {
 })
 
 // POST request that sends back body fat percentage, lean mass and fat mass for females
-router.post('/pinches/female', isAuthenticated, (req, res) => {
+router.post('/pinches/female', (req, res) => {
     const { tricep, suprailiac, thigh, weight, dob } = req.body
 
     // dob needs to be in the following format: 'YYYYMMDD'
