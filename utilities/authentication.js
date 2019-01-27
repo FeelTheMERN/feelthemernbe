@@ -3,7 +3,7 @@ const passport = require('passport')
 
 // Create a token if the user is authenticated
 const generateToken = (user) => {
-    const token = jwt.sign({username: user.username}, 'skyefit', {expiresIn: '1h'})
+    const token = jwt.sign({username: user.username}, 'skyefit', {expiresIn: '2d'})
     return token
 }
 
@@ -14,9 +14,12 @@ const isAuthenticated = (req, res, next) => {
     next()
 }
 
+// Authentication using passport
 const login = (req, res, next) => {
+    // Using local strategy?
     passport.authenticate('local', (err, user, message) => {
         if(!user) return res.status(403).send(message)
+        // Saving user to req so we can generate token later
         req.user = user
         req.login(user, next)
     })(req, res, next)

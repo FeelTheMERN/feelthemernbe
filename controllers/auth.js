@@ -8,6 +8,7 @@ const LocalStrategy = require('passport-local').Strategy
 // Requiring authentication methods from the Utilities directory
 const { isAuthenticated, generateToken, login } = require('../Utilities/authentication')
 
+// Ensures passport middleware is run with the login routes
 router.use(login)
 
 passport.serializeUser((user, done) => {
@@ -22,6 +23,7 @@ passport.deserializeUser((username, done) => {
 
 passport.use(new LocalStrategy(
     (username, password, done) => {
+        // If admin is logging in, look through the admin collection, if not look through the user collection
         const collection = (username === "admin") ? Admin : User
         collection.findOne({ username })
             .then((user) => {
