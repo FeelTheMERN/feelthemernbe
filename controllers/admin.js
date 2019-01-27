@@ -36,11 +36,6 @@ router.post('/users/new', (req, res) => {
         contact,
         personalAttribute,
         notes,
-        transactionalHistory,
-        remainingSession,
-        sessions,
-        dietaryRequirements,
-        mealPlans
     } = req.body
 
     User.findOne({ username })
@@ -57,11 +52,11 @@ router.post('/users/new', (req, res) => {
                     contact,
                     personalAttribute,
                     notes,
-                    transactionalHistory,
-                    remainingSession,
-                    sessions,
-                    dietaryRequirements,
-                    mealPlans
+                    transactionalHistory: [],
+                    remainingSession: 0,
+                    sessions: [],
+                    dietaryRequirements: [],
+                    mealPlans: []
                 }
         
                 // Creating a new document in users
