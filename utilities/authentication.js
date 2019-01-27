@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken')
 const passport = require('passport')
+const BlacklistedToken = require('../models/BlacklistedToken')
 
 // Create a token if the user is authenticated
 const generateToken = (user) => {
@@ -9,9 +10,18 @@ const generateToken = (user) => {
 
 // Checks token from front-end and proceed if authenticated
 const isAuthenticated = (req, res, next) => {
+    // Acquiring token from headers sent from the front-end
     const { token } = req.headers
     const decoded = jwt.verify(token, 'skyefit')
-    next()
+    
+    // Checking if token is in the blacklist, if not, proceed
+    // Blacklisted tokens are tokens that were created and have been logged out before expiration
+    BlacklistedToken.findOne({ token })
+        .then(token => {
+            if(token) return res.status(401).send('You are not authorized')
+            next()
+        })
+        .catch(err => res.send(err))
 }
 
 // Authentication using passport
