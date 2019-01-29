@@ -99,3 +99,4 @@ There is to be no confidentiality agreement to be entered into.
 * Moment
 * Passport
 * Passport-local
+* Cookie-session

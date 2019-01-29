@@ -23,7 +23,10 @@ db.once('open', () => {
 app.use(express.json())
 
 // Fills in the correct headers to allow access 
-app.use(cors())
+app.use(cors({
+    credentials: true,
+    origin: process.env.SESSIONS_ORIGIN
+}))
 
 // User passport's middleware
 app.use(passport.initialize())
