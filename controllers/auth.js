@@ -5,11 +5,20 @@ const Admin = require('../models/Admin')
 const bcrypt = require('bcrypt')
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
+const cookieSession = require('cookie-session')
 // Requiring authentication methods from the Utilities directory
 const { isAuthenticated, generateToken, login } = require('../Utilities/authentication')
 
 // Ensures passport middleware is run with the login routes
 router.use(login)
+
+// Creates session with expiration of 3 days
+router.use(cookieSession(
+    {
+        maxAge: 1000 * 60 * 60 * 72,
+        keys: [process.env.SESSION_SECRET_KEY]
+    }
+))
 
 passport.serializeUser((user, done) => {
     done(null, user.username)

@@ -4,9 +4,6 @@ const router = express.Router()
 // Routes for authentication
 router.use('/login', require('./auth'))
 
-// Routes for logging out
-router.use('/logout', require('./logout'))
-
 // Routes for admin endpoints
 router.use('/admin', require('./admin'))
 
