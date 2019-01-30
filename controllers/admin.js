@@ -7,9 +7,10 @@ const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
 const axios = require('axios')
 // Requiring authentication methods from the Utilities directory
-const { isAuthenticated } = require('../Utilities/authentication')
+const { isAuthenticated, isAdmin } = require('../Utilities/authentication')
 
 router.use(isAuthenticated)
+router.use(isAdmin)
 
 // GET request that returns all users
 router.get('/users', (req, res) => {
