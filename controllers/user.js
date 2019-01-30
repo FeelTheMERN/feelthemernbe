@@ -9,6 +9,7 @@ const { uploadFile } = require('../utilities/cloudinary')
 
 // Run isAuthenticated with all endpoints
 router.use(isAuthenticated)
+// Checks if user is a user
 router.use(isUser)
 
 // GET request for individual user

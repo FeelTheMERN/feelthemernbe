@@ -10,6 +10,7 @@ const axios = require('axios')
 const { isAuthenticated, isAdmin } = require('../Utilities/authentication')
 
 router.use(isAuthenticated)
+// Checks if user is an admin
 router.use(isAdmin)
 
 // GET request that returns all users

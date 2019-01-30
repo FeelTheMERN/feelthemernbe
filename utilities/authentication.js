@@ -24,6 +24,7 @@ const isAuthenticated = (req, res, next) => {
     next()
 }
 
+// Middleware function that checks if user is admin
 const isAdmin = (req, res, next) => {
     const { username } = req
 
@@ -35,6 +36,7 @@ const isAdmin = (req, res, next) => {
         .catch(err => res.status(401).send('Unauthorized'))
 }
 
+// Middleware function that checks if user is user
 const isUser = (req, res, next) => {
     const { username } = req
     
