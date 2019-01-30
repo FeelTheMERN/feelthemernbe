@@ -125,29 +125,9 @@ router.post('/pinches/female', (req, res) => {
     })
 })
 
-// POST request for hitting Nutritionix api
+// POST request for obtaining nutritional information from Nutritionix
 router.post('/mealplans', (req, res) => {
-    const { query } = req.body
-    console.log(query)
-    // const headers = {
-    //     'content-type': 'application/json',
-    //     'x-app-id': process.env.NUTRITIONIX_APP_ID,
-    //     'x-app-key': process.env.NUTRITIONIX_APP_KEY
-    // }
-    // const URL = 'https://trackapi.nutritionix.com/v2/natural/nutrients'
 
-    // axios.post(URL, { "query": "chicken" }, headers)
-    //     .then(resp => console.log(resp))
-    //     .catch(err => res.send(err))
-
-    // axios.post('https://trackapi.nutritionix.com/v2/natural/nutrients', { "query": "pork" }, {
-    //     headers: {
-    //         'content-type': 'application/json',
-    //         'x-app-id': process.env.NUTRITIONIX_APP_ID,
-    //         'x-app-key': process.env.NUTRITIONIX_APP_KEY
-    //     }
-    // })
-    // .then(resp => console.log(query))
-    // .catch(err => console.log(query))
 })
+
 module.exports = router
