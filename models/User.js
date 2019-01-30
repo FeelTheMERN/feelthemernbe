@@ -18,6 +18,8 @@ const userSchema = new mongoose.Schema({
         goalWeight: Number,
         bodyFatLog: [Number],
         goalBodyFat: Number,
+        fatMass: [Number],
+        leanMass: [Number],
         goal: String
     },
     notes: String,
