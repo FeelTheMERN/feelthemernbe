@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt')
 const moment = require('moment')
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
+const axios = require('axios')
 // Requiring authentication methods from the Utilities directory
 const { isAuthenticated } = require('../Utilities/authentication')
 
@@ -122,6 +123,11 @@ router.post('/pinches/female', (req, res) => {
         fatMass,
         leanMass
     })
+})
+
+// POST request for obtaining nutritional information from Nutritionix
+router.post('/mealplans', (req, res) => {
+
 })
 
 module.exports = router

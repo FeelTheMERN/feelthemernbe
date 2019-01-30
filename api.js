@@ -25,7 +25,7 @@ app.use(express.json())
 // Fills in the correct headers to allow access 
 app.use(cors({
     credentials: true,
-    origin: process.env.SESSIONS_ORIGIN
+    origin: process.env.REQUEST_ORIGIN
 }))
 
 // User passport's middleware

@@ -13,7 +13,9 @@ const generateToken = (user) => {
 const isAuthenticated = (req, res, next) => {
     // Acquiring token from headers sent from the front-end
     const { token } = req.headers
-    const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY)
+    const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY, (err, decoded) => {
+        if(err) return res.status(403).send('Token expired')
+    })
     next()
 }
 
