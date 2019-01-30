@@ -36,8 +36,8 @@ router.post('/users/new', (req, res) => {
         password,
         contact,
         personalAttribute,
-        notes,
-    } = req.body
+        notes
+    } = req.body.user
 
     User.findOne({ username })
         .then(user => {
