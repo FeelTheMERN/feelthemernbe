@@ -71,6 +71,15 @@ router.post('/users/new', (req, res) => {
         })
 })
 
+router.delete('/users/delete', (req, res) => {
+    const { id } = req.body
+
+    User.findByIdAndRemove(id, (err, user) => {
+        if(err) return res.status(404).send('Invalid user')
+        return res.send({user, message: 'User successfully deleted'})
+    })
+})
+
 // POST request that sends back body fat percentage, lean mass and fat mass for males
 router.post('/pinches/male', (req, res) => {
     const { chest, abdomen, thigh, weight, dob } = req.body
