@@ -7,6 +7,7 @@ const { isAuthenticated } = require('../Utilities/authentication')
 // Requiring cloudinary methods from the utilities directory
 const { uploadFile } = require('../utilities/cloudinary')
 
+// Run isAuthenticated with all endpoints
 router.use(isAuthenticated)
 
 // GET request for individual user

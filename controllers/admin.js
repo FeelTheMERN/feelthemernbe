@@ -71,9 +71,25 @@ router.post('/users/new', (req, res) => {
         })
 })
 
+// PUT route to update user information
+router.put('/users/edit', (req, res) => {
+    const { user } = req.body
+    const { _id } = user
+
+    if(!_id) return res.status(404).send('Invalid user')
+    
+    // Querying database with _id provided and updating with req.body.user
+    User.findByIdAndUpdate( _id, user, { new: true }, (err, user) => {
+        if(err) return res.status(404).send('Invalid user')
+        return res.send(user)
+    })
+})
+
+// DELETE routes to delete user from database
 router.delete('/users/delete', (req, res) => {
     const { id } = req.body
 
+    // Find user by Id and delete it
     User.findByIdAndRemove(id, (err, user) => {
         if(err) return res.status(404).send('Invalid user')
         return res.send({user, message: 'User successfully deleted'})
