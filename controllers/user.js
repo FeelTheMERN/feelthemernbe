@@ -3,12 +3,13 @@ const router = express.Router()
 const User = require('../models/User')
 const multer = require('multer')
 // Requiring authentication methods from the utilities directory
-const { isAuthenticated } = require('../Utilities/authentication')
+const { isAuthenticated, isUser } = require('../Utilities/authentication')
 // Requiring cloudinary methods from the utilities directory
 const { uploadFile } = require('../utilities/cloudinary')
 
 // Run isAuthenticated with all endpoints
 router.use(isAuthenticated)
+router.use(isUser)
 
 // GET request for individual user
 router.get('/users/:id', (req, res) => {
