@@ -39,7 +39,7 @@ const userSchema = new mongoose.Schema({
             location: String
         }
     ],
-    dietaryRequirements: [String],
+    dietaryRequirements: String,
     mealPlans: [
         {
             day1: [

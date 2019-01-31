@@ -162,8 +162,7 @@ router.post('/pinches/female', (req, res) => {
 // POST request for obtaining nutritional information from Nutritionix
 router.post('/macros', (req, res) => {
     const { query } = req.body
-    console.log(query)
-    return res.send('testing')
+    return res.send(query)
 })
 
 const storage = multer.memoryStorage()
