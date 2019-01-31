@@ -163,6 +163,9 @@ router.post('/macros', (req, res) => {
     return res.send('testing')
 })
 
+const storage = multer.memoryStorage()
+const upload = multer({ storage })
+
 // POST request for uploading profile picture
 router.post('/uploadprofilepicture', upload.single('file'), (req, res) => {
     const { buffer } = req.file
