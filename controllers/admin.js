@@ -41,7 +41,8 @@ router.post('/users/new', (req, res) => {
         contact,
         personalAttribute,
         notes,
-        dietaryRequirements
+        dietaryRequirements,
+        image
     } = req.body.user
 
     User.findOne({ username })
@@ -58,6 +59,7 @@ router.post('/users/new', (req, res) => {
                     contact,
                     personalAttribute,
                     notes,
+                    image,
                     transactionalHistory: [],
                     remainingSession: 0,
                     sessions: [],
@@ -170,7 +172,6 @@ const upload = multer({ storage })
 // POST request for uploading profile picture
 router.post('/uploadprofilepicture', upload.single('file'), (req, res) => {
     const { buffer } = req.file
-    console.log(buffer)
     uploadFile(buffer)
         .then(resp => res.send(resp))
         .catch(err => res.status(500).send('There was an error with Cloudinary'))

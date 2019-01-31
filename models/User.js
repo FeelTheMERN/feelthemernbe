@@ -23,6 +23,7 @@ const userSchema = new mongoose.Schema({
         goal: String
     },
     notes: String,
+    image: String,
     transactionalHistory: [
         {
             date: Date,
