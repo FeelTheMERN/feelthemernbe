@@ -173,15 +173,7 @@ const upload = multer({ storage })
 router.post('/uploadprofilepicture', upload.single('file'), (req, res) => {
     const { buffer } = req.file
     uploadFile(buffer)
-        .then(resp => {
-            const url = resp
-            const urlArr = url.split('/')
-            const options = 'w_400,h_400,c_crop,g_face,r_max'
-
-            urlArr.splice(6, 0, options)
-            const newURL = urlArr.join('/')
-            res.send(newURL)
-        })
+        .then(resp => res.send(resp))
         .catch(err => res.status(500).send('There was an error with Cloudinary'))
 })
 
