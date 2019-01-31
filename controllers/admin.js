@@ -162,7 +162,20 @@ router.post('/pinches/female', (req, res) => {
 // POST request for obtaining nutritional information from Nutritionix
 router.post('/macros', (req, res) => {
     const { query } = req.body
-    return res.send(query)
+    const config = {
+        headers: {
+            "Content-Type": "application/json",
+            "x-app-id": process.env.NUTRITIONIX_APP_ID,
+            "x-app-key": process.env.NUTRITIONIX_APP_KEY
+        }
+    }
+
+    axios.post('https://trackapi.nutritionix.com/v2/natural/nutrients', {"query": query}, config)
+        .then(resp => res.send(resp.data))
+        .catch(err => {
+            console.log(err)
+            res.status(400).send('Server error')
+        })
 })
 
 const storage = multer.memoryStorage()
