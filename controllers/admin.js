@@ -38,7 +38,8 @@ router.post('/users/new', (req, res) => {
         password,
         contact,
         personalAttribute,
-        notes
+        notes,
+        dietaryRequirements
     } = req.body.user
 
     User.findOne({ username })
@@ -58,7 +59,7 @@ router.post('/users/new', (req, res) => {
                     transactionalHistory: [],
                     remainingSession: 0,
                     sessions: [],
-                    dietaryRequirements: [],
+                    dietaryRequirements,
                     mealPlans: []
                 }
         

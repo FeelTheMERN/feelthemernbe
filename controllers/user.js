@@ -28,9 +28,10 @@ const upload = multer({ storage })
 // POST request for uploading profile picture
 router.post('/uploadProfilePicture', upload.single('file'), (req, res) => {
     const { buffer } = req.file
+    console.log(buffer)
     uploadFile(buffer)
-        .then(resp => console.log(resp))
-        .catch(err => console.log(err))
+        .then(resp => res.send(resp))
+        .catch(err => res.status(500).send('There was an error with Cloudinary'))
 })
 
 module.exports = router
