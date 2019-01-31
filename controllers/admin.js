@@ -8,6 +8,7 @@ const LocalStrategy = require('passport-local').Strategy
 const axios = require('axios')
 // Requiring authentication methods from the Utilities directory
 const { isAuthenticated, isAdmin } = require('../Utilities/authentication')
+const { uploadFile } = require('../utilities/cloudinary')
 
 router.use(isAuthenticated)
 // Checks if user is an admin
