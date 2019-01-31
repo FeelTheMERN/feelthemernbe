@@ -26,7 +26,7 @@ const storage = multer.memoryStorage()
 const upload = multer({ storage })
 
 // POST request for uploading profile picture
-router.post('/uploadProfilePicture', upload.single('file'), (req, res) => {
+router.post('/uploadprofilepicture', upload.single('file'), (req, res) => {
     const { buffer } = req.file
     console.log(buffer)
     uploadFile(buffer)
