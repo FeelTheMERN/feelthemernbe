@@ -40,66 +40,7 @@ const userSchema = new mongoose.Schema({
         }
     ],
     dietaryRequirements: String,
-    mealPlans: [
-        {
-            day1: [
-                [
-                    {
-                        qty: String,
-                        foodItem: String
-                    }
-                ]
-            ],
-            day2: [
-                [
-                    {
-                        qty: String,
-                        foodItem: String
-                    }
-                ]
-            ],
-            day3: [
-                [
-                    {
-                        qty: String,
-                        foodItem: String
-                    }
-                ]
-            ],
-            day4: [
-                [
-                    {
-                        qty: String,
-                        foodItem: String
-                    }
-                ]
-            ],
-            day5: [
-                [
-                    {
-                        qty: String,
-                        foodItem: String
-                    }
-                ]
-            ],
-            day6: [
-                [
-                    {
-                        qty: String,
-                        foodItem: String
-                    }
-                ]
-            ],
-            day7: [
-                [
-                    {
-                        qty: String,
-                        foodItem: String
-                    }
-                ]
-            ],
-        }
-    ]
+    mealPlans: []
 })
 
 module.exports = mongoose.model('User', userSchema)
