@@ -3,7 +3,7 @@ const router = express.Router()
 const User = require('../models/User')
 const multer = require('multer')
 // Requiring authentication methods from the utilities directory
-const { isAuthenticated, isUser } = require('../Utilities/authentication')
+const { isAuthenticated, isUser } = require('../utilities/authentication')
 // Requiring cloudinary methods from the utilities directory
 const { uploadFile } = require('../utilities/cloudinary')
 

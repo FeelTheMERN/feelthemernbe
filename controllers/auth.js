@@ -7,7 +7,7 @@ const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
 const cookieSession = require('cookie-session')
 // Requiring authentication methods from the Utilities directory
-const { isAuthenticated, generateToken, login } = require('../Utilities/authentication')
+const { isAuthenticated, generateToken, login } = require('../utilities/authentication')
 
 // Ensures passport middleware is run with the login routes
 router.use(login)

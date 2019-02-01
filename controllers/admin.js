@@ -8,7 +8,7 @@ const LocalStrategy = require('passport-local').Strategy
 const axios = require('axios')
 const multer = require('multer')
 // Requiring authentication methods from the Utilities directory
-const { isAuthenticated, isAdmin } = require('../Utilities/authentication')
+const { isAuthenticated, isAdmin } = require('../utilities/authentication')
 const { uploadFile } = require('../utilities/cloudinary')
 
 router.use(isAuthenticated)
