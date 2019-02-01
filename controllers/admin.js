@@ -178,6 +178,25 @@ router.post('/macros', (req, res) => {
         })
 })
 
+// PUT request to edit meal plans
+router.put('/users/editmealplan', (req, res) => {
+    const { id, mealPlan } = req.body
+
+    User.findOne({_id: id})
+        .then(user => {
+
+            if(!user) return res.status(404).send('Invalid user')
+
+            user.mealPlans.push(mealPlan)
+
+            user.save((err, updatedUser) => {
+                if(err) return res.status(400).send('Server error')
+                res.send(updatedUser)
+            })
+        })
+        .catch(err => res.status(404).send('Invalid user'))
+})
+
 const storage = multer.memoryStorage()
 const upload = multer({ storage })
 
