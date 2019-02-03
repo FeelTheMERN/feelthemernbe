@@ -9,8 +9,7 @@ const passport = require('passport')
 const port = 5000
 
 // Connecting to MongoDB
-// mongoose.connect(process.env.MLAB_URL)
-mongoose.connect('mongodb://localhost:27017/finalProject')
+mongoose.connect(process.env.MLAB_URL)
 
 db.on('error', () => {
     console.log('Failed to connect to mongoDB')

@@ -1,3 +1,5 @@
-.env
-test.http
-seed
+**/.env
+**/node_modules
+**/now.json
+**/test.http
+**/seed
