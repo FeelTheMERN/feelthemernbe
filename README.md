@@ -33,9 +33,7 @@ TECHNOLOGIES
     - Mongoose
     - React 
 
-- DATABASE 
-    - MongoDB 
-    - Mlab (MongoDB hosting: database-as-a-service )
+## Compose a summary of your application including problem definition and solution
 
 - DEPENDENCIES//LIBRARIES  - (See below: Short questions - detailed explanations for why we used the following):
     - Axios  
@@ -61,7 +59,9 @@ TECHNOLOGIES
 ******************************************************************************************************************************
 ******************************************************************************************************************************
 
-PROJECT MANAGEMENT 
+![User Flow Chart](docs/images/user_flow_chart.png)
+
+## Wireframes for all main pages of your app
 
 - CLIENT INTERACTION 
  - Initial meeting...meet with Skye on...discussed her current business needs, clients, and the technologies she uses. We   
@@ -70,22 +70,21 @@ PROJECT MANAGEMENT
    We followed up with her...
    Changes made to our initial plans. (see challenges: ) 
 
- - Second meeting: conceptual design and feedback  
- - * Show evidence of client communication, e.g. meeting minutes, emails, or other communication tools  
+![ERD](docs/images/erd.png)
+
+## Project plan and effort estimation
 
  - QUESTIONNAIRE FOR CLIENT 
 
- - SYSTEM TESTING (Prepare maintenance or support plans for client)   
- - TRELLO ( See: screenshots in 'Trello' folder)
- - AGILE DEVELOPMENT METHODOLOGIES
- - POST PROJECT REVIEW
-
 ******************************************************************************************************************************
 ******************************************************************************************************************************
 
-PROJECT CHARTER
+## OO design documentation
 
-    PROJECT NAME: SKYE FIT 
+# Tools & Methodologies
+
+
+## Trello
 
     PROJECT DESCRIPTION:
 
@@ -94,77 +93,20 @@ PROJECT CHARTER
 
     PROJECT SPONSOR: Skye **** Independent (Personal Trainer)
 
-    DATE APPROVED: /01/19
-
-    BUSINESS CASE: 
-
-    EXPECTED GOALS/DELIVERABLES: 
-
-    TEAM MEMBERS: COREY..LILY..SIMON TRUONG...MAT WATTS 
-
-    ROLES: BACK-END: Simon Truong, Mat Watts 
-           FRONT-END: Lily, Corey
-
-    RISKS AND CONSTRAINTS:
-    - 
-    MILESTONES: 
-    - Succesfully connected with the Nutritionix api. 
+# Short Answer Questions
 
 
-******************************************************************************************************************************
-******************************************************************************************************************************
+## What are the most important aspects of quality software?
 
-APPLICATION DESIGN 
+* Identifying and solving user stories
+* Continual and automated testing is integral to ensure smooth performance
+* Ensure design and framework is robust yet flexible for future changes
+* Frequent communication with the client and assessing feedback
+* Keeping the code DRY, re-use components as much as possible
+* Writing comments when appropriate
+* Ensure functions are suitable and accurate, and functions handling sensitive data are secure and compliant to relevant guidelines
 
-- (see above: for problem and definition and solution )
-
-USER STORIES
-WORKFLOW DIAGRAM: USER JOURNEY/S
-WIREFRAMES
-ENTITY RELATIONSHIP DIAGRAM (ERD)
-
-DATA FLOW DIAGRAM
-
-FINAL DESIGN 
-
-PREMLIMINARY DESIGNS
-
-******************************************************************************************************************************
-******************************************************************************************************************************
-
-SHORT ANSWER QUESTIONS
-
-
-1. What are the most important aspects of quality software?
-
-    FUNCTIONAL, PROCESS and STRUCTURAL quality. 
-
-    FUNCTIONAL quality means that the software correctly performs the tasks it's intended to do for its users. Among the     
-    attributes of functional quality are:
-
-    - Meeting the specified requirements 
-    - Creating software that has few defects
-    - Good enough performance 
-    - Ease of learning and ease of use
-
-    STRUCTURAL quality means that the code itself is well structured and allows: 
-
-    - Code testability. Is the code organised in a way that makes testing easy?
-    - Code maintainability. How easy is it to add new code or change existing code without introducing bugs? 
-    - Code understandability. Is the code readable? Is it more complex than it needs to be?  These have a large impact on how 
-      quickly new developers can begin working with an existing code base.
-    - Code Effeciency. Especially in resource-constrained situations, writing effecient code can be critically important. 
-    - Code security. Does the software allow common attacks such as buffer overruns and SQL injection. Is it insecure in other 
-      ways?    
-
-    PROCESS quality refers to the quality of the development process significantly affects the value received by users, 
-    development teams, and sponsors, and so all three groups have a stake in improving this aspect of software quality. 
-
-    - Meeting delivery dates. Was the software delivered on time?
-    - Meeting budgets. Was the software delivered for the expected amount of money? 
- 
-
-2. What libraries are being used in the app and why?
+## What libraries are being used in the app and why?
 
 * Axios: Provided a more convenient and readable syntax when making HTTP requests
 * Body Parser: Important for accessing payloads (req.body) from POST, PUT and DELETE requests
@@ -175,7 +117,7 @@ SHORT ANSWER QUESTIONS
 * Dotenv: Essential for storing sensitive data (keys, secrets) in environmental variables
 * Express: Framework for the backend
 * JSONWEBTOKEN: Authentication with tokens, an added layer of security on top of cookies
-* Moment: A convenient library for reading date formats
+* Moment: A convenient library for manipulating date formats
 * Mongoose: Used to generate models which interacts with the database
 * Multer: Allows for temporary in-memory storage before uploading to Cloudinary
 * Nodemon: Convenient dev package that restarts the server when alterations are made
