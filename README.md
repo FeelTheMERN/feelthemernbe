@@ -1,100 +1,46 @@
+# Skyefit
 
-TITLE: SKYE FIT
+# Description
 
-GITHUB - (..........)
-DEPLOYED APP URL - (.........)
+# Tech Stack
+* Mongo / Mongoose
+* Express
+* React.js
+* Node.js
 
-DESCRIPTION:  
-A full-stack, application built with the MERN stack. 
-
-
-DEVELOPERS:
-Lily ,
-Simon Truong,
-Corey,
-Mat Watts 
-
-
-
-ABOUT THE CLIENT: 
-Skye (Personal Trainer)  
-
-PROJECT BRIEF
-
-- PROBLEM/S to solve
-
-- CHALLENGES
-
-TECHNOLOGIES 
-
-- FRAMEWORK (MERN)
-    - Node js
-    - Express
-    - Mongoose
-    - React 
+# Project Management
 
 ## Compose a summary of your application including problem definition and solution
 
-- DEPENDENCIES//LIBRARIES  - (See below: Short questions - detailed explanations for why we used the following):
-    - Axios  
-    - Bcrypt 
-    - Cloudinary
-    - Cookie-Session 
-    - Cors 
-    - DotEnv
-    - Express
-    - Json Web token 
-    - Moment
-    - Multer 
-    - Passport (Passport - local) 
-    - Nodemon   
-    - Node-sass
-    - React-Calendar
-    - React-Dom
-    - React-Moment 
-    - React-Router 
-    - React-Scripts
+## Review the conceptual design with the client and edit based on their feedback
 
+## User stories for the whole application
 
-******************************************************************************************************************************
-******************************************************************************************************************************
-
+## A workflow diagram of the user journey/s
 ![User Flow Chart](docs/images/user_flow_chart.png)
 
 ## Wireframes for all main pages of your app
 
-- CLIENT INTERACTION 
- - Initial meeting...meet with Skye on...discussed her current business needs, clients, and the technologies she uses. We   
-   discussed how an application could improve her 
-   workflow and business in general. (See above: for her problems/solutions, and our project brief.)
-   We followed up with her...
-   Changes made to our initial plans. (see challenges: ) 
-
+## Entity Relationship Diagram (ERD)
 ![ERD](docs/images/erd.png)
 
 ## Project plan and effort estimation
 
- - QUESTIONNAIRE FOR CLIENT 
-
-******************************************************************************************************************************
-******************************************************************************************************************************
+## Data Flow Diagram
 
 ## OO design documentation
 
-# Tools & Methodologies
+## 2.1.4 Tools & Methodologies
 
+## Demonstrate your project management skills
 
 ## Trello
 
-    PROJECT DESCRIPTION:
+## GitHub
 
+## Use Agile development methodologies
 
-    PROJECT MANAGER/S: Lily (Front-End Lead), Simon (Back-End Lead)
-
-    PROJECT SPONSOR: Skye **** Independent (Personal Trainer)
-
-# Short Answer Questions
-
+## Code review
 
 ## What are the most important aspects of quality software?
 
@@ -138,4 +84,8 @@ TECHNOLOGIES
    Simon:
    Mat: 
 
-
+# Developers:
+* Lily
+* Simon
+* Corey
+* Mat Watts
