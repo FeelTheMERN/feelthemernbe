@@ -87,17 +87,18 @@ There is to be no confidentiality agreement to be entered into.
 
 # Packages BE
 
-* Express
-* Nodemon
-* Mongoose
-* JWT
-* Cloudinary
-* Dotenv
-* Multer
-* Cors
+* Axios
 * Bcrypt
+* Cloudinary
+* Cookie-session
+* Cors
+* Dotenv
+* Express
+* JSONWEBTOKEN
 * Moment
+* Mongoose
+* Multer
+* Nodemon
+* Now
 * Passport
 * Passport-local
-* Cookie-session
-* Axios

@@ -11,6 +11,7 @@ const multer = require('multer')
 const { isAuthenticated, isAdmin } = require('../utilities/authentication')
 const { uploadFile } = require('../utilities/cloudinary')
 
+// Checks if user is authenticated
 router.use(isAuthenticated)
 // Checks if user is an admin
 router.use(isAdmin)
@@ -197,6 +198,7 @@ router.put('/users/editmealplan', (req, res) => {
         .catch(err => res.status(404).send('Invalid user'))
 })
 
+// Using Multer for in memory storage that will be sent to Cloudinary
 const storage = multer.memoryStorage()
 const upload = multer({ storage })
 
