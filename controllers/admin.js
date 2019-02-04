@@ -72,7 +72,10 @@ router.post('/users/new', (req, res) => {
                 User.create(newUser, err => {
                     if(err) return res.status(500).send("User could not be created")
                     User.findOne({ username })
-                        .then(user => res.send(user))
+                        .then(user => {
+                            if(!user) return res.status(404).send('Invalid user')
+                            return res.send(user)
+                        })
                         .catch(err => res.status(404).send('Invalid user'))
                 })
             })
