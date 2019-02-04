@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const db = mongoose.connection
 const cors = require('cors')
 const passport = require('passport')
+const bodyParser = require('body-parser')
 
 const port = 5000
 
@@ -20,7 +21,8 @@ db.once('open', () => {
 })
 
 // Body parser
-app.use(express.json())
+app.use(bodyParser.json({limit: '50mb'}))
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}))
 
 // Fills in the correct headers to allow access 
 app.use(cors({
