@@ -1,53 +1,83 @@
-# SkyeFit
 
-# Project Management
+TITLE: SKYE FIT
 
-## Record interactions with your client in a diary format
+GITHUB - (..........)
+DEPLOYED APP URL - (.........)
 
-## Plan information gathering activities to determine project requirements, constraints and risks
+DESCRIPTION:  
+A full-stack, application built with the MERN stack. 
 
-## Develop project charter, including preliminary statement of project scope and obtain sign-off
 
-## Prepare project work breakdown and schedule
+DEVELOPERS:
+Lily ,
+Simon Truong,
+Corey,
+Mat Watts 
 
-## Allocate roles and responsibilities to team members, based on project solution requirements
 
-## Monitor each other’s assigned work
 
-## Reassess ongoing project scope changes, risks and issues
+ABOUT THE CLIENT: 
+Skye (Personal Trainer)  
 
-## Manage system testing and hand over activities. Prepare maintenance or support plans for client
+PROJECT BRIEF
 
-## Obtain final project sign-off
+- PROBLEM/S to solve
 
-## As a team, conduct post project review
+- CHALLENGES
 
-## Create a questionnaire for the client to ascertain the satisfaction with your products and services
+TECHNOLOGIES 
 
-# Application Design
-
+- FRAMEWORK (MERN)
+    - Node js
+    - Express
+    - Mongoose
+    - React 
 
 ## Compose a summary of your application including problem definition and solution
 
-## Review the conceptual design with the client and edit based on their feedback
+- DEPENDENCIES//LIBRARIES  - (See below: Short questions - detailed explanations for why we used the following):
+    - Axios  
+    - Bcrypt 
+    - Cloudinary
+    - Cookie-Session 
+    - Cors 
+    - DotEnv
+    - Express
+    - Json Web token 
+    - Moment
+    - Multer 
+    - Passport (Passport - local) 
+    - Nodemon   
+    - Node-sass
+    - React-Calendar
+    - React-Dom
+    - React-Moment 
+    - React-Router 
+    - React-Scripts
 
-## User stories for the whole application
 
-## A workflow diagram of the user journey/s
+******************************************************************************************************************************
+******************************************************************************************************************************
 
 ![User Flow Chart](docs/images/user_flow_chart.png)
 
 ## Wireframes for all main pages of your app
 
-## Entity Relationship Diagram (ERD)
+- CLIENT INTERACTION 
+ - Initial meeting...meet with Skye on...discussed her current business needs, clients, and the technologies she uses. We   
+   discussed how an application could improve her 
+   workflow and business in general. (See above: for her problems/solutions, and our project brief.)
+   We followed up with her...
+   Changes made to our initial plans. (see challenges: ) 
 
 ![ERD](docs/images/erd.png)
 
 ## Project plan and effort estimation
 
-## Data Flow Diagram
+ - QUESTIONNAIRE FOR CLIENT 
 
-
+******************************************************************************************************************************
+******************************************************************************************************************************
 
 ## OO design documentation
 
@@ -56,13 +86,12 @@
 
 ## Trello
 
-## GitHub
+    PROJECT DESCRIPTION:
 
-## Use Agile development methodologies
 
-## Code review
+    PROJECT MANAGER/S: Lily (Front-End Lead), Simon (Back-End Lead)
 
-## Show evidence of client communication
+    PROJECT SPONSOR: Skye **** Independent (Personal Trainer)
 
 # Short Answer Questions
 
@@ -95,8 +124,18 @@
 * Now: We used now.sh to deploy our backend application
 * Passport: Important middleware responsible for authenticating username and password
 
-## A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
+3. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 
-## Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
+4. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
+   Corey: 
+   Lily:
+   Simon:
+   Mat: 
 
-## Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature?
+5. Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature?
+   Corey: 
+   Lily:
+   Simon:
+   Mat: 
+
+
