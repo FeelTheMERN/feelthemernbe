@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const User = require('../models/User')
 const multer = require('multer')
+const bcrypt = require('bcrypt')
 // Requiring authentication methods from the utilities directory
 const { isAuthenticated, isUser } = require('../utilities/authentication')
 // Requiring cloudinary methods from the utilities directory
@@ -19,6 +20,16 @@ router.get('/users/:id', (req, res) => {
     User.findOne({ _id: id })
         .then(user => res.send(user))
         .catch(err => res.send(err))
+})
+
+router.post('/users/:id/editpassword', (req, res) => {
+    const { password } = req.body
+    if(!password) return res.status(400).send('Please enter a valid password')
+
+    bcrypt.hash(password, 10, (err, hash) => {
+        if(err) return res.status(400).send('Please enter valid password')
+        return res.send(hash)
+    })
 })
 
 // Using multer to store memory??

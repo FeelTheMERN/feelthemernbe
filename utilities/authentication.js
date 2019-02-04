@@ -30,7 +30,7 @@ const isAdmin = (req, res, next) => {
 
     Admin.findOne({ username })
         .then(user => {
-            if(!user) return res.status(404).send('Unauthorized')
+            if(!user) return res.status(403).send('Unauthorized')
             next()
         })
         .catch(err => res.status(401).send('Unauthorized'))
@@ -42,7 +42,7 @@ const isUser = (req, res, next) => {
     
     User.findOne({ username })
         .then(user => {
-            if(!user) return res.status(404).send('Unauthorized')
+            if(!user) return res.status(403).send('Unauthorized')
             next()
         })
         .catch(err => res.status(401).send('Unauthorized'))

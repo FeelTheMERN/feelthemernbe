@@ -26,6 +26,7 @@
 
 # Application Design
 
+
 ## Compose a summary of your application including problem definition and solution
 
 ## Review the conceptual design with the client and edit based on their feedback
@@ -34,18 +35,24 @@
 
 ## A workflow diagram of the user journey/s
 
+![User Flow Chart](docs/images/user_flow_chart.png)
+
 ## Wireframes for all main pages of your app
 
 ## Entity Relationship Diagram (ERD)
+
+![ERD](docs/images/erd.png)
 
 ## Project plan and effort estimation
 
 ## Data Flow Diagram
 
+
+
 ## OO design documentation
 
-
 # Tools & Methodologies
+
 
 ## Trello
 
@@ -57,8 +64,8 @@
 
 ## Show evidence of client communication
 
-
 # Short Answer Questions
+
 
 ## What are the most important aspects of quality software?
 
@@ -69,7 +76,6 @@
 * Keeping the code DRY, re-use components as much as possible
 * Writing comments when appropriate
 * Ensure functions are suitable and accurate, and functions handling sensitive data are secure and compliant to relevant guidelines
-* 
 
 ## What libraries are being used in the app and why?
 
