@@ -62,6 +62,15 @@
 
 ## What are the most important aspects of quality software?
 
+* Identifying and solving user stories
+* Continual and automated testing is integral to ensure smooth performance
+* Ensure design and framework is robust yet flexible for future changes
+* Frequent communication with the client and assessing feedback
+* Keeping the code DRY, re-use components as much as possible
+* Writing comments when appropriate
+* Ensure functions are suitable and accurate, and functions handling sensitive data are secure and compliant to relevant guidelines
+* 
+
 ## What libraries are being used in the app and why?
 
 * Axios: Provided a more convenient and readable syntax when making HTTP requests
@@ -73,7 +82,7 @@
 * Dotenv: Essential for storing sensitive data (keys, secrets) in environmental variables
 * Express: Framework for the backend
 * JSONWEBTOKEN: Authentication with tokens, an added layer of security on top of cookies
-* Moment: A convenient library for reading date formats
+* Moment: A convenient library for manipulating date formats
 * Mongoose: Used to generate models which interacts with the database
 * Multer: Allows for temporary in-memory storage before uploading to Cloudinary
 * Nodemon: Convenient dev package that restarts the server when alterations are made
