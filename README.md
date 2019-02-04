@@ -1,48 +1,49 @@
 # Skyefit
 
-# Description
+## Description
 
-# Tech Stack
-* Mongo / Mongoose
-* Express
+## Tech Stack
+
 * React.js
+* Express
 * Node.js
+* Mongo / Mongoose
 
-# Project Management
+## Project Management
 
-## Compose a summary of your application including problem definition and solution
+### Compose a summary of your application including problem definition and solution
 
-## Review the conceptual design with the client and edit based on their feedback
+### Review the conceptual design with the client and edit based on their feedback
 
-## User stories for the whole application
+### User stories for the whole application
 
-## A workflow diagram of the user journey/s
+### A workflow diagram of the user journey/s
 ![User Flow Chart](docs/images/user_flow_chart.png)
 
-## Wireframes for all main pages of your app
+### Wireframes for all main pages of your app
 
-## Entity Relationship Diagram (ERD)
+### Entity Relationship Diagram (ERD)
 ![ERD](docs/images/erd.png)
 
-## Project plan and effort estimation
+### Project plan and effort estimation
 
-## Data Flow Diagram
+### Data Flow Diagram
 
-## OO design documentation
+### OO design documentation
 
-## 2.1.4 Tools & Methodologies
+### 2.1.4 Tools & Methodologies
 
-## Demonstrate your project management skills
+### Demonstrate your project management skills
 
-## Trello
+### Trello
 
-## GitHub
+### GitHub
 
-## Use Agile development methodologies
+### Use Agile development methodologies
 
-## Code review
+### Code review
 
-## What are the most important aspects of quality software?
+### What are the most important aspects of quality software?
 
 * Identifying and solving user stories
 * Continual and automated testing is integral to ensure smooth performance
@@ -52,7 +53,7 @@
 * Writing comments when appropriate
 * Ensure functions are suitable and accurate, and functions handling sensitive data are secure and compliant to relevant guidelines
 
-## What libraries are being used in the app and why?
+### What libraries are being used in the app and why?
 
 * Axios: Provided a more convenient and readable syntax when making HTTP requests
 * Body Parser: Important for accessing payloads (req.body) from POST, PUT and DELETE requests
@@ -73,18 +74,18 @@
 3. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 
 4. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
-   Corey: 
-   Lily:
-   Simon:
-   Mat: 
+Corey: 
+Lily:
+Simon:
+Mat: 
 
 5. Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature?
-   Corey: 
-   Lily:
-   Simon:
-   Mat: 
+Corey: 
+Lily:
+Simon:
+Mat: 
 
-# Developers:
+## Developers:
 * Lily
 * Simon
 * Corey

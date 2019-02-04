@@ -13,6 +13,17 @@ router.use(isAuthenticated)
 // Checks if user is a user
 router.use(isUser)
 
+router.get('/users', (req, res) => {
+    const { username } = req
+
+    User.findOne({ username })
+        .then(user => {
+            if(!user) return res.status(404).send('Invalid user')
+            return res.send(user._id)
+        })
+        .catch(err => res.status(404).send('Invalid user'))
+})
+
 // GET request for individual user
 router.get('/users/:id', (req, res) => {
     const { id } = req.params
