@@ -40,15 +40,15 @@ As user ISBAT:
 ### A workflow diagram of the user journey/s
 ![User Flow Chart](docs/images/user_flow_chart.png)
 
-### Wireframes for all main pages of your app
+### Data Flow Diagram
+![DFD](docs/images/data_flow_diagram.png)
 
 ### Entity Relationship Diagram (ERD)
 ![ERD](docs/images/erd.png)
 
-### Project plan and effort estimation
+### Wireframes for all main pages of your app
 
-### Data Flow Diagram
-![DFD](docs/images/data_flow_diagram.png)
+### Project plan and effort estimation
 
 ### OO design documentation
 
