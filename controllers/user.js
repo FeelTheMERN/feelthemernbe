@@ -30,7 +30,7 @@ router.get('/users/:id', (req, res) => {
 
     User.findOne({ _id: id })
         .then(user => res.send(user))
-        .catch(err => res.send(err))
+        .catch(err => res.status(404).send('Invalid user'))
 })
 
 router.put('/users/:id/editpassword', (req, res) => {

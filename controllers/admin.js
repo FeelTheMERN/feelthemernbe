@@ -20,7 +20,7 @@ router.use(isAdmin)
 router.get('/users', (req, res) => {
     User.find({})
         .then(users => res.send(users))
-        .catch(err => res.send(err))
+        .catch(err => res.status(404).send('Resource not found'))
 })
 
 // GET request for individual user
@@ -29,7 +29,7 @@ router.get('/users/:id', (req, res) => {
     
     User.findOne({ _id: id})
         .then(user => res.send(user))
-        .catch(err => res.send(err))
+        .catch(err => res.status(404).send('Resource not found'))
 })
 
 // POST request for new client
@@ -80,6 +80,7 @@ router.post('/users/new', (req, res) => {
                 })
             })
         })
+        .catch(err => res.status(500).send('Internal server error'))
 })
 
 // PUT route to update user information
@@ -177,8 +178,7 @@ router.post('/macros', (req, res) => {
     axios.post('https://trackapi.nutritionix.com/v2/natural/nutrients', {"query": query}, config)
         .then(resp => res.send(resp.data))
         .catch(err => {
-            console.log(err)
-            res.status(400).send('Server error')
+            res.status(500).send('Server error')
         })
 })
 

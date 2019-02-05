@@ -28,6 +28,7 @@
 ### Project plan and effort estimation
 
 ### Data Flow Diagram
+![DFD](docs/images/data_flow_diagram.png)
 
 ### OO design documentation
 
@@ -64,6 +65,7 @@
 * Dotenv: Essential for storing sensitive data (keys, secrets) in environmental variables
 * Express: Framework for the backend
 * JSONWEBTOKEN: Authentication with tokens, an added layer of security on top of cookies
+* jwt-decode: Allows the ability to decode the token in the front-end
 * Moment: A convenient library for manipulating date formats
 * Mongoose: Used to generate models which interacts with the database
 * Multer: Allows for temporary in-memory storage before uploading to Cloudinary
