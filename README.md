@@ -17,6 +17,26 @@
 
 ### User stories for the whole application
 
+As admin ISBAT: 
+* log in 
+* log out
+* view all my clients and their details including profile, bookings and meal plans
+* generate new users, edit their details and delete a user
+* add, edit and delete bookings
+* create, edit and delete meal plans for my clients to view on their accounts
+* calculate and store data based on the Jackson Pollock skinfold method
+* view my dashboard with a calendar which will show upcoming booked sessions
+* view nutritional information of desired foods
+* filter through my clients
+
+As user ISBAT:
+* log in
+* log out
+* view and edit my profile
+* view my personal trainer’s meal plans
+* view remaining number of paid/booked sessions
+* view my upcoming sessions on a calendar
+
 ### A workflow diagram of the user journey/s
 ![User Flow Chart](docs/images/user_flow_chart.png)
 

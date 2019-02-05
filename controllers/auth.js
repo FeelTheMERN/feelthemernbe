@@ -52,6 +52,10 @@ passport.use(new LocalStrategy(
 router.post('/admin', (req, res) => {
     // Generate token and send to front-end
     const { user } = req
+
+    // If username is NOT admin, send error
+    if(user.username !== 'admin') return res.status(400).send('Server error')
+
     const token = generateToken(user)
     
     // Sending token as response

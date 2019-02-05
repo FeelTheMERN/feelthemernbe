@@ -32,13 +32,7 @@ const userSchema = new mongoose.Schema({
             totalSessions: Number
         }
     ],
-    sessions: [
-        {
-            date: Date,
-            time: Date,
-            location: String
-        }
-    ],
+    sessions: [],
     dietaryRequirements: String,
     mealPlans: []
 })
