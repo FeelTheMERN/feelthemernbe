@@ -2,12 +2,70 @@
 
 ## Description
 
+Skyefit is a web application that aims to provide our client a more convenient experience in managing nutrition, excercise, record keeping and organization. Its main feature is to allow our client to create user accounts, calculate body fat percentage, create meal plans and a calendar that displays booked sessions
+
 ## Tech Stack
 
 * React.js
 * Express
 * Node.js
 * Mongo / Mongoose
+
+## Getting Started
+
+### Installing
+
+We recommend using Homebrew to install some of these prerequisites
+
+Homebrew
+```
+    $curl-fsSLhttps://raw.githubusercontent.com/Homebrew/install/master/install
+```
+
+React
+```
+    $npm install -g create-react-app
+```
+
+Node
+```
+    $brew install node
+```
+
+Mongo
+```
+    $brew install mongodb
+```
+
+It is also required to git clone the front-end and back-end from [github](https://github.com/FeelTheMERN) and run: 
+```
+    $npm i
+```
+
+Furthermore, you must sign-up to [Cloudinary](https://cloudinary.com/) and [Nutritionix](https://developer.nutritionix.com/)
+
+A .env file must be created in the back-end at the root directory with the following environmental variables:
+
+```javascript
+    CLOUDINARY_CLOUD_NAME=<cloudinaryName>
+    CLOUDINARY_API_KEY=<cloudinaryApiKey>
+    CLOUDINARY_SECRET_KEY=<cloudinarySecretKey>
+    JWT_SECRET_KEY=<tokenSecretKey>
+    SESSION_SECRET_KEY=<sessionSecretKey>
+    REQUEST_ORIGIN=<urlOfWebApp>
+    NUTRITIONIX_APP_ID=<nutritionixID>
+    NUTRITIONIX_APP_KEY=<nutritionixKey>
+    MLAB_URL=<mongodbURL>
+```
+
+A .env file must be created in the front-end at the root directory with the following environmental variables:
+
+```javascript
+    REACT_APP_NUTRITIONIX_APP_ID=<nutritionixID>
+    REACT_APP_NUTRITIONIX_APP_KEY=<nutritionixKey>
+```
+
+### Deployment
 
 ## Project Management
 
@@ -107,7 +165,9 @@ Lily:
 Simon:
 Mat: 
 
-## Developers:
+### Further Development
+
+## Authors
 * Lily
 * Simon
 * Corey
