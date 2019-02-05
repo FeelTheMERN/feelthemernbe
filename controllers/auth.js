@@ -43,6 +43,7 @@ passport.use(new LocalStrategy(
                     return done(null, user)
                 })
             })
+            .catch(err => res.status(404).send('Invalid user'))
         }
     )
 )
