@@ -191,31 +191,31 @@ router.post('/addsession', (req, res) => {
     const { username } = req
     const { id, session } = req.body
 
-    User.findOne({ _id: id })
-        .then(user => {
-            if(!user) return res.status(404).send('Invalid user 1')
+    Admin.findOne({ username })
+        .then(admin => {
+            if(!admin) return res.status(404).send('Invalid user')
 
-            user.sessions.push(session)
+            session.id = id
+            admin.sessions.push(session)
 
-            user.save((err, updatedUser) => {
+            admin.save((err, updatedUser) => {
                 if(err) return res.status(400).send('Server error')
-                console.log('User session saved')
-            })
-
-            Admin.findOne({ username })
-                .then(admin => {
-                    if(!admin) return res.status(404).send('Invalid user 2')
-
-                    admin.sessions.push(session)
-
-                    admin.save((err, updatedUser) => {
-                        if(err) return res.status(400).send('Server error')
-                        return res.send(admin)
+                
+                User.findOne({ _id: id })
+                    .then(user => {
+                        if(!user) return res.status(404).send('Invalid user')
+    
+                        user.sessions.push(session)
+    
+                        user.save((err, updatedUser) => {
+                            if(err) return res.status(400).send('Server error')
+                            return res.send(user)
+                        })
                     })
-                })
-                .catch(err => res.status(404).send('Invalid user 3'))
+                    .catch(err => res.status(404).send('Invalid user'))
+            })
         })
-        .catch(err => res.status(404).send('Invalid user 4'))
+        .catch(err => res.status(404).send('Invalid user'))
 })
 
 // GET request to receive sessions from admin
