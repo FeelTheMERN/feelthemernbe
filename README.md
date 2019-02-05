@@ -48,11 +48,11 @@ A .env file must be created in the back-end at the root directory with the follo
 
 ```javascript
     CLOUDINARY_CLOUD_NAME=<cloudinaryName>
-    CLOUDINARY_API_KEY=<cloudinaryApiKey>
+    CLOUDINARY_API_KEY=<cloudinaryAPIKey>
     CLOUDINARY_SECRET_KEY=<cloudinarySecretKey>
     JWT_SECRET_KEY=<tokenSecretKey>
     SESSION_SECRET_KEY=<sessionSecretKey>
-    REQUEST_ORIGIN=<urlOfWebApp>
+    REQUEST_ORIGIN=<urlOfDevelopmentWebApp>
     NUTRITIONIX_APP_ID=<nutritionixID>
     NUTRITIONIX_APP_KEY=<nutritionixKey>
     MLAB_URL=<mongodbURL>
@@ -66,6 +66,56 @@ A .env file must be created in the front-end at the root directory with the foll
 ```
 
 ### Deployment
+
+* Database: [mlab](https://mlab.com/)
+* Back-end: [now.sh](https://zeit.co/now)
+* Front-end: [netlify](https://www.netlify.com/)
+
+The following files must be included in the back-end root directory: 
+
+now.sh
+```json
+{
+    "name": "skyefit",
+    "alias": "skyefit",
+    "env": {
+        "CLOUDINARY_CLOUD_NAME": <cloudinaryName>,
+        "CLOUDINARY_API_KEY": <cloudinaryAPIKey>,
+        "CLOUDINARY_SECRET_KEY": <cloudinarySecretKey>,
+        "JWT_SECRET_KEY": <tokenSecretKey>,
+        "SESSION_SECRET_KEY": <sessionSecretKey>,
+        "REQUEST_ORIGIN": "https://skyefit.netlify.com",
+        "NUTRITIONIX_APP_ID": <nutritionixID>,
+        "NUTRITIONIX_APP_KEY": <nutritionixKey>,
+        "MLAB_URL": <mlabURL>
+    },
+    "version": 2,
+    "builds" : [
+      { "src": "api.js", "use": "@now/node-server" }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "api.js" }
+    ]
+}
+```
+
+The following files must be included in the front-end root directory: 
+
+.env.development
+```
+    REACT_APP_API_URL=<developmentAPIURL>
+```
+
+.env.production
+```
+    REACT_APP_API_URL=<productionAPIURL>
+```
+
+Finally, on both directories we run: 
+
+```
+    npm run deploy
+```
 
 ## Project Management
 
