@@ -19,7 +19,6 @@ const isAuthenticated = (req, res, next) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY, (err, decoded) => {
         if(err) return res.status(403).send('Token expired')
         req.username = decoded.username
-        console.log(req.user)
     })
     next()
 }
@@ -29,8 +28,8 @@ const isAdmin = (req, res, next) => {
     const { username } = req
 
     Admin.findOne({ username })
-        .then(user => {
-            if(!user) return res.status(401).send('Unauthorized')
+        .then(admin => {
+            if(!admin) return res.status(401).send('Unauthorized')
             next()
         })
         .catch(err => res.status(404).send('Invalid user'))

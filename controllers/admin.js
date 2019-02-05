@@ -198,7 +198,7 @@ router.post('/addsession', (req, res) => {
             session.id = id
             admin.sessions.push(session)
 
-            admin.save((err, updatedUser) => {
+            admin.save(err => {
                 if(err) return res.status(400).send('Server error')
                 
                 User.findOne({ _id: id })
@@ -209,7 +209,7 @@ router.post('/addsession', (req, res) => {
     
                         user.save((err, updatedUser) => {
                             if(err) return res.status(400).send('Server error')
-                            return res.send(user)
+                            return res.send(updatedUser)
                         })
                     })
                     .catch(err => res.status(404).send('Invalid user'))
@@ -223,9 +223,10 @@ router.get('/sessions', (req, res) => {
     const { username } = req
 
     Admin.findOne({ username })
-        .then(user => {
-            if(!user) return res.status(404).send('Invalid user')
-            return res.send(user)
+        .then(admin => {
+            if(!admin) return res.status(404).send('Invalid user')
+            
+            admin.sessions.map(session => session.id)
         })
         .catch(err => res.status(404).send('Invalid user'))
 })
