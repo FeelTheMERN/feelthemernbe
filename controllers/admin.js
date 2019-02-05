@@ -226,7 +226,13 @@ router.get('/sessions', (req, res) => {
         .then(admin => {
             if(!admin) return res.status(404).send('Invalid user')
             
-            admin.sessions.map(session => session.id)
+            const sessionIds = admin.sessions.map(session => session.id)
+
+            User.find({
+                _id: { $in : sessionIds }
+            }, (err, users) => {
+                return res.send(users)
+            })
         })
         .catch(err => res.status(404).send('Invalid user'))
 })
