@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const User = require('../models/User')
+const Admin = require('../models/Admin')
 const bcrypt = require('bcrypt')
 const moment = require('moment')
 const passport = require('passport')
@@ -45,6 +46,9 @@ router.post('/users/new', (req, res) => {
         dietaryRequirements,
         image
     } = req.body.user
+
+    // New users can not have admin as username
+    if(username === 'admin') return res.status(400).send('Invalid username')
 
     User.findOne({ username })
         .then(user => {
@@ -182,13 +186,56 @@ router.post('/macros', (req, res) => {
         })
 })
 
+// POST request to add session to admin and user
+router.post('/addsession', (req, res) => {
+    const { username } = req
+    const { id, session } = req.body
+
+    User.findOne({ _id: id })
+        .then(user => {
+            if(!user) return res.status(404).send('Invalid user 1')
+
+            user.sessions.push(session)
+
+            user.save((err, updatedUser) => {
+                if(err) return res.status(400).send('Server error')
+                console.log('User session saved')
+            })
+
+            Admin.findOne({ username })
+                .then(admin => {
+                    if(!admin) return res.status(404).send('Invalid user 2')
+
+                    admin.sessions.push(session)
+
+                    admin.save((err, updatedUser) => {
+                        if(err) return res.status(400).send('Server error')
+                        return res.send(admin)
+                    })
+                })
+                .catch(err => res.status(404).send('Invalid user 3'))
+        })
+        .catch(err => res.status(404).send('Invalid user 4'))
+})
+
+// GET request to receive sessions from admin
+router.get('/sessions', (req, res) => {
+    const { username } = req
+
+    Admin.findOne({ username })
+        .then(user => {
+            if(!user) return res.status(404).send('Invalid user')
+            return res.send(user)
+        })
+        .catch(err => res.status(404).send('Invalid user'))
+})
+
 // PUT request to edit meal plans
 router.put('/users/editmealplan', (req, res) => {
     const { id, mealPlan } = req.body
 
     User.findOne({_id: id})
         .then(user => {
-
             if(!user) return res.status(404).send('Invalid user')
 
             user.mealPlans.push(mealPlan)

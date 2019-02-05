@@ -6,13 +6,7 @@ const adminSchema = new mongoose.Schema({
     password: String,
     email: String,
     contactNumber: String,
-    sessions: [
-        {
-            date: Date,
-            time: Date,
-            location: String
-        }
-    ]
+    sessions: []
 })
 
 module.exports = mongoose.model('Admin', adminSchema)

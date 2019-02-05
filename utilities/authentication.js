@@ -15,7 +15,7 @@ const generateToken = (user) => {
 const isAuthenticated = (req, res, next) => {
     // Acquiring token from headers sent from the front-end
     const { token } = req.headers
-    if(!token) res.status(403).send('Unauthorized')
+    if(!token) return res.status(403).send('Unauthorized')
     const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY, (err, decoded) => {
         if(err) return res.status(403).send('Token expired')
         req.username = decoded.username
@@ -52,7 +52,7 @@ const isUser = (req, res, next) => {
 const login = (req, res, next) => {
     // Using local strategy?
     passport.authenticate('local', (err, user, message) => {
-        if(!user) return res.status(403).send(message)
+        if(!user) return res.status(400).send(message)
         // Saving user to req so we can generate token later
         req.user = user
         req.login(user, next)
