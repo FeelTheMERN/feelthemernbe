@@ -1,9 +1,12 @@
 ### Review the conceptual design with the client and edit based on their feedback
 ### Wireframes for all main pages of your app
+### OO design documentation
+### Code review
 
 # Skyefit
 
 [github](https://github.com/FeelTheMERN)
+[Skyefit](https://skyefit.netlify.com/)
 
 ## Description
 
@@ -122,9 +125,7 @@ Finally, on both directories we run:
     npm run deploy
 ```
 
-## Project Management
-
-### Compose a summary of your application including problem definition and solution
+### Summary
 
 As a personal trainer, our client uses a multitude of different services to gain nutritional information, create meal plans, calculate percentage body fat and organize of her bookings. Skyefit aims to bring all these services together, to provide a more convenient and fluid experience for our client
 
@@ -152,6 +153,15 @@ As user ISBAT:
 * view remaining number of paid/booked sessions
 * view my upcoming sessions on a calendar
 
+### Project Management
+* Leadership
+* Scheduling (Time management)
+* Risk Management
+* Task Management
+* Quality Management
+
+### OO design documentation
+
 ### User Flow Diagram
 ![UFD](docs/images/user_flow_diagram.png)
 
@@ -161,13 +171,11 @@ As user ISBAT:
 ### Entity Relationship Diagram (ERD)
 ![ERD](docs/images/erd.png)
 
-### Wireframes for all main pages of your app
-
 ### Project plan and effort estimation
 
+![projectplan](docs/images/project_plan.png)
 
-
-### OO design documentation
+### Wireframes for all main pages of your app
 
 ## Tools & Methodologies
 
@@ -180,6 +188,14 @@ As user ISBAT:
 ![slack](docs/images/slack.png)
 
 ### Use Agile development methodologies
+
+* Daily morning stand-ups
+* Customer Collaboration
+* Iterative Development
+* User Stories
+* SCRUM Meetings
+* Programming in Pairs
+* Retrospective Meeting
 
 ### Code review
 
@@ -214,6 +230,32 @@ As user ISBAT:
 
 3. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 
+For a team to succesfully develop a web app, there are many things to consider, from staff to skills to job requirements.
+
+Paramount amongst these concerns are the needs of the client. What are their needs? Can your team deliver a solution in the form of a viable product? Is so, how long will the project take? And, how much will it cost?
+
+For the designers and developers, they must think of the project in terms of the web app's features and functions  and the hard skills, tools and resources required.
+
+Besides technical know-how, the project requires staff with project management and people (soft) skills, some of the roles include leadership, delegating tasks, determining budgets and timelines marketing, managing tasks and risks, and ongoing communication with the team and clients/stakeholders.
+
+Agile methodologies are a common approach to project management that is commonly utilised by the tech industry.
+
+Below is a list of some (but not limited to) key skills required to develop a web app.
+
+Technical:
+
+* HTML/CSS: Builds the skeleton of a website (the layout) and the style and look
+* Programming Language/s (Javascript, Ruby, PHP, Python etc.): Makes websites and applications more interactive and functional
+* Web Development Frameworks (Rails, Node etc.): Resources and tools for developers to build and manage web applications, web services and websites. A framework includes templating for presenting information within a browser, a programming environment for scripting the flow of information and an API for accescing underlying data resources
+* Design and Planning Software (Adobe suite - Photoshop, Illustrator, Trello etc.): Design, edit and stylise the look of websites; plan and create mockup websites, experiment and visually communicate concepts with clients, and team members
+* Responsive Design: Create websites for optimal user experience. More and more consumers user their mobile devices for online searches. If websites aren't compatible with mobile devices, they display and function poorly, increasing the likelihood of users clicking away from the site
+* Content Management Systems (Wordpress etc.): Easy to use, cms allow developers to edit and modify web pages, add plugins, and run tests for bugs and features for SEO. (in some cases, a cms would be a suitable solution.)
+* Search Engine Optimisation (SEO): Essential for website marketing and visibility, SEO attracts traffic and secure leads, connecting products and consumers
+* Version Control/Git: A system that records changes to a file or set of files over over time so that a specific version can be recalled later
+* Testing/Debugging: Testing is a process of finding bugs or errors in a software product that is done manually by tester or can be automated. Debugging is a process of fixing the bugs found in testing phase
+* Command Line: An itegral tool, mastering the command line enables developers to fulfill tasks quicker and automate with special commands that loop through and perform the same action on many files — saving loads of time in the process
+* Browser Development Tools: Enable developers to do things such as executing and debugging JS snippets, inspecting and editing DOM elements, monitoring real-time network traffic as the web page loads to identify bottlenecks, analysing CSS performance, ensuring your code is not using too much memory or too many CPU cycles
+
 4. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
 Corey: 
 Lily:
@@ -228,8 +270,15 @@ Mat:
 
 ### Further Development
 
+The following features are being considered to be implemented: 
+
+* Recording user's excercise routine
+* Payment system
+* A chart system to visualize progress
+* Further refactoring code
+
 ## Authors
-* Lily
-* Simon
-* Corey
-* Mat Watts
+* [Lily](https://github.com/lilianamolloy)
+* [Simon](https://github.com/Simon-Truong)
+* [Corey](https://github.com/coreyhellwege)
+* [Mat Watts](https://github.com/mathewwatts)
