@@ -1,7 +1,6 @@
-### Review the conceptual design with the client and edit based on their feedback
 ### Wireframes for all main pages of your app
+### Review the conceptual design with the client and edit based on their feedback
 ### OO design documentation
-### Client communication
 ### Presentation
 ### testing
 
@@ -172,17 +171,17 @@ As user ISBAT:
 ### Entity Relationship Diagram (ERD)
 ![ERD](docs/images/erd.png)
 
+### Client communication
+
+![Initial meeting](docs/images/client_communication1.png)
+
+![Whatsapp communication](docs/images/client_communication2.jpg)
+
+
+
 ### Wireframes
 
 ## Tools & Methodologies
-
-### Trello
-
-![trello](docs/images/trello.png)
-
-### Slack
-
-![slack](docs/images/slack.png)
 
 ### Agile development methodologies
 
@@ -197,6 +196,14 @@ As user ISBAT:
 ### Code review
 
 Code review was practiced by strictly enforcing team members to merge each other's code. Individual members can not merge their own code to master, but must seek a team member to review their code and provide feedback. This allows for new insight and perspective which can improve code quality.
+
+### Trello
+
+![trello](docs/images/trello.png)
+
+### Slack
+
+![slack](docs/images/slack.png)
 
 ## Short Answer Questions
 
