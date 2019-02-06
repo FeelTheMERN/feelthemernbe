@@ -1,8 +1,6 @@
 ### Review the conceptual design with the client and edit based on their feedback
 ### Wireframes for all main pages of your app
 ### OO design documentation
-### Code review
-### SAQ D & E
 ### Client communication
 ### Presentation
 ### testing
@@ -15,7 +13,7 @@
 
 ## Description
 
-Skyefit is a web application that aims to provide our client a more convenient experience in managing nutrition, excercise, record keeping and organization. Its main feature is to allow our client to create user accounts, calculate body fat percentage, create meal plans and a calendar that displays booked sessions
+Skyefit is a web application that aims to provide our client a more convenient experience in managing nutrition, excercise, record keeping and organization. Its main feature is to allow our client to create user accounts, calculate body fat percentage, create meal plans and a calendar that displays booked sessions.
 
 ## Tech Stack
 
@@ -134,7 +132,7 @@ Finally, on both directories we run:
 
 ### Summary
 
-As a personal trainer, our client uses a multitude of different services to gain nutritional information, create meal plans, calculate percentage body fat and organize of her bookings. Skyefit aims to bring all these services together, to provide a more convenient and fluid experience for our client
+As a personal trainer, our client uses a multitude of different services to gain nutritional information, create meal plans, calculate percentage body fat and organize of her bookings. Skyefit aims to bring all these services together, to provide a more convenient and fluid experience for our client.
 
 ### Review the conceptual design with the client and edit based on their feedback
 
@@ -168,13 +166,13 @@ As user ISBAT:
 ### Data Flow Diagram
 ![DFD](docs/images/data_flow_diagram.png)
 
+### Project plan
+![projectplan](docs/images/project_plan.png)
+
 ### Entity Relationship Diagram (ERD)
 ![ERD](docs/images/erd.png)
 
-### Project plan and effort estimation
-![projectplan](docs/images/project_plan.png)
-
-### Wireframes for all main pages of your app
+### Wireframes
 
 ## Tools & Methodologies
 
@@ -186,7 +184,7 @@ As user ISBAT:
 
 ![slack](docs/images/slack.png)
 
-### Use Agile development methodologies
+### Agile development methodologies
 
 * Daily morning stand-ups
 * Customer Collaboration
@@ -197,6 +195,10 @@ As user ISBAT:
 * Retrospective Meeting
 
 ### Code review
+
+Code review was practiced by strictly enforcing team members to merge each other's code. Individual members can not merge their own code to master, but must seek a team member to review their code and provide feedback. This allows for new insight and perspective which can improve code quality.
+
+## Short Answer Questions
 
 ### What are the most important aspects of quality software?
 
@@ -278,17 +280,37 @@ Agile Methodologies:
 * Programming in Pairs
 * Retrospective Meeting
 
-4. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
-Corey: 
-Lily:
-Simon:
-Mat: 
+### Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
 
-5. Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature?
-Corey: 
-Lily:
-Simon:
-Mat: 
+* Familiarity with the terminal
+* Understanding how React behaves in terms of components, props, states and life cycles
+* The ability to hit certain APIs and using environmental variables
+* A grasp in Express and familiarity with endpoints and HTTP methods
+* An understanding in JavaScript: data types, data structures, functions and asynchronous functions
+* Basic knowledge of MongoDB and document data format especially JSON
+* Deployment: 
+    - Database: MLAB
+    - Front-end: Netlify
+    - Back-end: Now.sh
+* Creating user stories and implementing functionality based on them
+* Adopting agile methodologies
+* Consistent and thorough code reviews
+* Using libraries when required
+* Soft-skills that include communication, team work and leadership
+* Continous communication with the client
+* Code/peer review
+* Manual and automated testing
+* Project management, especially effective time management
+
+### Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature?
+
+The skills and knowledge aforementioned were sufficient to make the web app however, there were definitely improvements that could have been made: 
+
+* Further refactoring and DRY code
+* Plan more realistically, we were a little ambitious considering the time contraint
+* More automated testing to ensure a smooth experience for the client and users
+* Comment appropriately when required
+* Adopting more agile methodologies
 
 ### Further Development
 
