@@ -2,6 +2,7 @@
 ### Review the conceptual design with the client and edit based on their feedback
 ### OO design documentation
 ### Presentation
+### Testing deployment
 
 # Skyefit
 
@@ -182,7 +183,7 @@ As user ISBAT:
 
 ### Testing
 
-[Postman Tests](https://documenter.getpostman.com/view/5936412/RztoNUAN)
+[Postman development tests](https://documenter.getpostman.com/view/5936412/RztoNUAN#a9b903b2-356f-4554-a492-a64f464e72d0)
 
 ## Tools & Methodologies
 
@@ -322,7 +323,7 @@ The skills and knowledge aforementioned were sufficient to make the web app howe
 * Comment appropriately when required
 * Adopting more agile methodologies
 
-### Further Development
+## Further Development
 
 The following features are being considered to be implemented: 
 
@@ -335,4 +336,4 @@ The following features are being considered to be implemented:
 * [Lily](https://github.com/lilianamolloy)
 * [Simon](https://github.com/Simon-Truong)
 * [Corey](https://github.com/coreyhellwege)
-* [Mat Watts](https://github.com/mathewwatts)
+* [Mat](https://github.com/mathewwatts)
