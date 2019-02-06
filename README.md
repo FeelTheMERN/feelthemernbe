@@ -173,9 +173,9 @@ As user ISBAT:
 
 ### Client communication
 
-<img src="docs/images/client_communication1.png" alt="client_communication1" width="400">
+<img src="docs/images/client_communication1.png" alt="client_communication1" width="1000">
 
-<img src="docs/images/client_communication2.jpg" alt="client_communication2" width="200">
+<img src="docs/images/client_communication2.jpg" alt="client_communication2" width="400">
 
 
 
