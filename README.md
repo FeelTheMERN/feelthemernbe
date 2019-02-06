@@ -173,9 +173,9 @@ As user ISBAT:
 
 ### Client communication
 
-![Initial meeting](docs/images/client_communication1.png)
+<img src="docs/images/client_communication1.png" alt="client_communication1" width="400">
 
-![Whatsapp communication](docs/images/client_communication2.jpg)
+<img src="docs/images/client_communication2.jpg" alt="client_communication2" width="200">
 
 
 
