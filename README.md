@@ -1,4 +1,9 @@
+### Review the conceptual design with the client and edit based on their feedback
+### Wireframes for all main pages of your app
+
 # Skyefit
+
+[github](https://github.com/FeelTheMERN)
 
 ## Description
 
@@ -74,7 +79,7 @@ A .env file must be created in the front-end at the root directory with the foll
 The following files must be included in the back-end root directory: 
 
 now.sh
-```json
+```
 {
     "name": "skyefit",
     "alias": "skyefit",
@@ -121,9 +126,11 @@ Finally, on both directories we run:
 
 ### Compose a summary of your application including problem definition and solution
 
+As a personal trainer, our client uses a multitude of different services to gain nutritional information, create meal plans, calculate percentage body fat and organize of her bookings. Skyefit aims to bring all these services together, to provide a more convenient and fluid experience for our client
+
 ### Review the conceptual design with the client and edit based on their feedback
 
-### User stories for the whole application
+### User stories
 
 As admin ISBAT: 
 * log in 
@@ -145,8 +152,8 @@ As user ISBAT:
 * view remaining number of paid/booked sessions
 * view my upcoming sessions on a calendar
 
-### A workflow diagram of the user journey/s
-![User Flow Chart](docs/images/user_flow_chart.png)
+### User Flow Diagram
+![UFD](docs/images/user_flow_diagram.png)
 
 ### Data Flow Diagram
 ![DFD](docs/images/data_flow_diagram.png)
@@ -158,15 +165,19 @@ As user ISBAT:
 
 ### Project plan and effort estimation
 
+
+
 ### OO design documentation
 
-### 2.1.4 Tools & Methodologies
-
-### Demonstrate your project management skills
+## Tools & Methodologies
 
 ### Trello
 
-### GitHub
+![trello](docs/images/trello.png)
+
+### Slack
+
+![slack](docs/images/slack.png)
 
 ### Use Agile development methodologies
 
