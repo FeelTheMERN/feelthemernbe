@@ -17,6 +17,15 @@ router.use(isAuthenticated)
 // Checks if user is an admin
 router.use(isAdmin)
 
+// GET request for admin details
+router.get('/admin', (req, res) => {
+    const { username } = req
+
+    Admin.findOne({ username })
+        .then(admin => res.send(admin))
+        .catch(err => res.status(404).send('Invalid user'))
+})
+
 // GET request that returns all users
 router.get('/users', (req, res) => {
     User.find({})
@@ -186,6 +195,24 @@ router.post('/macros', (req, res) => {
         })
 })
 
+// PUT request to edit meal plans
+router.put('/users/editmealplan', (req, res) => {
+    const { id, mealPlan } = req.body
+
+    User.findOne({_id: id})
+        .then(user => {
+            if(!user) return res.status(404).send('Invalid user')
+
+            user.mealPlans.push(mealPlan)
+
+            user.save((err, updatedUser) => {
+                if(err) return res.status(400).send('Server error')
+                res.send(updatedUser)
+            })
+        })
+        .catch(err => res.status(404).send('Invalid user'))
+})
+
 // POST request to add session to admin and user
 router.post('/addsession', (req, res) => {
     const { username } = req
@@ -232,24 +259,6 @@ router.get('/sessions', (req, res) => {
                 _id: { $in : sessionIds }
             }, (err, users) => {
                 return res.send(users)
-            })
-        })
-        .catch(err => res.status(404).send('Invalid user'))
-})
-
-// PUT request to edit meal plans
-router.put('/users/editmealplan', (req, res) => {
-    const { id, mealPlan } = req.body
-
-    User.findOne({_id: id})
-        .then(user => {
-            if(!user) return res.status(404).send('Invalid user')
-
-            user.mealPlans.push(mealPlan)
-
-            user.save((err, updatedUser) => {
-                if(err) return res.status(400).send('Server error')
-                res.send(updatedUser)
             })
         })
         .catch(err => res.status(404).send('Invalid user'))

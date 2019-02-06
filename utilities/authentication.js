@@ -30,6 +30,7 @@ const isAdmin = (req, res, next) => {
     Admin.findOne({ username })
         .then(admin => {
             if(!admin) return res.status(401).send('Unauthorized')
+            req.username = admin.username
             next()
         })
         .catch(err => res.status(404).send('Invalid user'))
