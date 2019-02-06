@@ -2,10 +2,15 @@
 ### Wireframes for all main pages of your app
 ### OO design documentation
 ### Code review
+### SAQ D & E
+### Client communication
+### Presentation
+### testing
 
 # Skyefit
 
 [github](https://github.com/FeelTheMERN)
+
 [Skyefit](https://skyefit.netlify.com/)
 
 ## Description
@@ -125,6 +130,8 @@ Finally, on both directories we run:
     npm run deploy
 ```
 
+## Project
+
 ### Summary
 
 As a personal trainer, our client uses a multitude of different services to gain nutritional information, create meal plans, calculate percentage body fat and organize of her bookings. Skyefit aims to bring all these services together, to provide a more convenient and fluid experience for our client
@@ -153,13 +160,6 @@ As user ISBAT:
 * view remaining number of paid/booked sessions
 * view my upcoming sessions on a calendar
 
-### Project Management
-* Leadership
-* Scheduling (Time management)
-* Risk Management
-* Task Management
-* Quality Management
-
 ### OO design documentation
 
 ### User Flow Diagram
@@ -172,7 +172,6 @@ As user ISBAT:
 ![ERD](docs/images/erd.png)
 
 ### Project plan and effort estimation
-
 ![projectplan](docs/images/project_plan.png)
 
 ### Wireframes for all main pages of your app
@@ -228,7 +227,7 @@ As user ISBAT:
 * Now: We used now.sh to deploy our backend application
 * Passport: Important middleware responsible for authenticating username and password
 
-3. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
+### A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 
 For a team to succesfully develop a web app, there are many things to consider, from staff to skills to job requirements.
 
@@ -242,7 +241,7 @@ Agile methodologies are a common approach to project management that is commonly
 
 Below is a list of some (but not limited to) key skills required to develop a web app.
 
-Technical:
+Technical Skills:
 
 * HTML/CSS: Builds the skeleton of a website (the layout) and the style and look
 * Programming Language/s (Javascript, Ruby, PHP, Python etc.): Makes websites and applications more interactive and functional
@@ -255,6 +254,29 @@ Technical:
 * Testing/Debugging: Testing is a process of finding bugs or errors in a software product that is done manually by tester or can be automated. Debugging is a process of fixing the bugs found in testing phase
 * Command Line: An itegral tool, mastering the command line enables developers to fulfill tasks quicker and automate with special commands that loop through and perform the same action on many files — saving loads of time in the process
 * Browser Development Tools: Enable developers to do things such as executing and debugging JS snippets, inspecting and editing DOM elements, monitoring real-time network traffic as the web page loads to identify bottlenecks, analysing CSS performance, ensuring your code is not using too much memory or too many CPU cycles
+
+Soft Skills:
+* Communication
+* Team work
+* Analytical thinking
+* Self-Motivation
+* Creativity
+
+Project Management:
+* Leadership
+* Scheduling (Time management)
+* Risk Management
+* Task Management
+* Quality Management
+
+Agile Methodologies:
+* Daily morning stand-ups
+* Customer Collaboration
+* Iterative Development
+* User Stories
+* SCRUM Meetings
+* Programming in Pairs
+* Retrospective Meeting
 
 4. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
 Corey: 
@@ -272,7 +294,7 @@ Mat:
 
 The following features are being considered to be implemented: 
 
-* Recording user's excercise routine
+* Recording users' excercise routine
 * Payment system
 * A chart system to visualize progress
 * Further refactoring code
