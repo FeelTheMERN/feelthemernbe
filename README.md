@@ -1,7 +1,3 @@
-### Review the conceptual design with the client and edit based on their feedback
-### Testing deployment
-### Add README to front-end
-
 # Skyefit
 
 [github](https://github.com/FeelTheMERN)
@@ -159,6 +155,21 @@ As user ISBAT:
 
 [Wireframes](https://www.docdroid.net/OmFX9a5/skyefit-wireframes.pdf)
 
+### Screenshots
+
+![ss1](docs/images/ss1.png)
+![ss2](docs/images/ss2.png)
+![ss3](docs/images/ss3.png)
+![ss4](docs/images/ss4.png)
+![ss5](docs/images/ss5.png)
+![ss6](docs/images/ss6.png)
+![ss7](docs/images/ss7.png)
+![ss8](docs/images/ss8.png)
+![ss9](docs/images/ss9.png)
+![ss10](docs/images/ss10.png)
+![ss11](docs/images/ss11.png)
+![ss12](docs/images/ss12.png)
+
 ### Entity Relationship Diagram (ERD)
 ![ERD](docs/images/erd.png)
 
@@ -180,16 +191,18 @@ As user ISBAT:
 
 <img src="docs/images/client_communication2.jpg" alt="client_communication2" width="400">
 
-
+[Post project review](https://docdro.id/duA9iKJ)
 
 ### Testing
+
+[Postman development tests](https://documenter.getpostman.com/view/5936412/RztoNUAN#a1b79b85-0f43-4db4-8e67-cd49d9cfe173)
+
+[Postman production tests](https://documenter.getpostman.com/view/5936412/RztpoRxU)
 
 Automated tests:
 ```
     $npm run test
 ```
-
-[Postman development tests](https://documenter.getpostman.com/view/5936412/RztoNUAN#a1b79b85-0f43-4db4-8e67-cd49d9cfe173)
 
 ## Tools & Methodologies
 
