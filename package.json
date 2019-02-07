@@ -4,8 +4,8 @@
   "description": "FeelTheMERN Back-End",
   "main": "api.js",
   "scripts": {
+    "test": "node __test__/authentication.js",
     "start": "nodemon api.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "now && now alias"
   },
   "repository": {

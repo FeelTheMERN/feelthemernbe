@@ -1,6 +1,6 @@
 ### Review the conceptual design with the client and edit based on their feedback
-### Presentation
-### Testing deployment, automatic testing
+### Testing deployment
+### Deploy
 
 # Skyefit
 
@@ -122,7 +122,7 @@ The following files must be included in the front-end root directory:
 Finally, on both directories we run: 
 
 ```
-    npm run deploy
+    $npm run deploy
 ```
 
 ## Project
@@ -157,7 +157,7 @@ As user ISBAT:
 
 ### Wireframes
 
-![Wireframes](https://www.docdroid.net/OmFX9a5/skyefit-wireframes.pdf)
+[Wireframes](https://www.docdroid.net/OmFX9a5/skyefit-wireframes.pdf)
 
 ### Entity Relationship Diagram (ERD)
 ![ERD](docs/images/erd.png)
@@ -183,6 +183,11 @@ As user ISBAT:
 
 
 ### Testing
+
+Automated tests:
+```
+    $npm run test
+```
 
 [Postman development tests](https://documenter.getpostman.com/view/5936412/RztoNUAN#a1b79b85-0f43-4db4-8e67-cd49d9cfe173)
 
