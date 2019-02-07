@@ -33,16 +33,18 @@ router.get('/users/:id', (req, res) => {
         .catch(err => res.status(404).send('Invalid user'))
 })
 
-router.put('/users/:id/editpassword', (req, res) => {
-    const { id } = req.params
-    const { password } = req.body
-    if(!password) return res.status(400).send('Please enter a valid password')
+// PUT request for updating password
+router.put('/users/updatepassword', (req, res) => {
+    const { username } = req
+    const { newPassword } = req.body
 
-    bcrypt.hash(password, 10, (err, hash) => {
+    if(!newPassword) return res.status(400).send('Please enter a valid password')
+
+    bcrypt.hash(newPassword, 10, (err, hash) => {
         if(err) return res.status(400).send('Please enter valid password')
 
-        User.findByIdAndUpdate( id, {password: hash}, { new: true }, (err, user) => {
-            if(err) return res.status(404).send('Invalid user')
+        User.findOneAndUpdate( { username }, {password: hash}, { new: true }, (err, user) => {
+            if(err) return res.status(500).send('Server error')
             return res.send(user)
         })
     })
