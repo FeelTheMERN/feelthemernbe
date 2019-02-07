@@ -1,8 +1,6 @@
-### Wireframes for all main pages of your app
 ### Review the conceptual design with the client and edit based on their feedback
-### OO design documentation
 ### Presentation
-### Testing deployment
+### Testing deployment, automatic testing
 
 # Skyefit
 
@@ -157,7 +155,15 @@ As user ISBAT:
 * view remaining number of paid/booked sessions
 * view my upcoming sessions on a calendar
 
-### OO design documentation
+### Wireframes
+
+![Wireframes](https://www.docdroid.net/OmFX9a5/skyefit-wireframes.pdf)
+
+### Entity Relationship Diagram (ERD)
+![ERD](docs/images/erd.png)
+
+### Project plan
+![projectplan](docs/images/project_plan.png)
 
 ### User Flow Diagram
 ![UFD](docs/images/user_flow_diagram.png)
@@ -165,11 +171,8 @@ As user ISBAT:
 ### Data Flow Diagram
 ![DFD](docs/images/data_flow_diagram.png)
 
-### Project plan
-![projectplan](docs/images/project_plan.png)
-
-### Entity Relationship Diagram (ERD)
-![ERD](docs/images/erd.png)
+### OO design documentation
+![oo design](docs/images/oo_design.png)
 
 ### Client communication
 
@@ -179,11 +182,9 @@ As user ISBAT:
 
 
 
-### Wireframes
-
 ### Testing
 
-[Postman development tests](https://documenter.getpostman.com/view/5936412/RztoNUAN#a9b903b2-356f-4554-a492-a64f464e72d0)
+[Postman development tests](https://documenter.getpostman.com/view/5936412/RztoNUAN#a1b79b85-0f43-4db4-8e67-cd49d9cfe173)
 
 ## Tools & Methodologies
 
