@@ -1,6 +1,6 @@
 ### Review the conceptual design with the client and edit based on their feedback
 ### Testing deployment
-### Deploy
+### Add README to front-end
 
 # Skyefit
 
@@ -336,10 +336,11 @@ The following features are being considered to be implemented:
 * Recording users' excercise routine
 * Payment system
 * A chart system to visualize progress
+* Improve user interface through CSS
 * Further refactoring code
 
 ## Authors
-* [Lily](https://github.com/lilianamolloy)
+* [Lili](https://github.com/lilianamolloy)
 * [Simon](https://github.com/Simon-Truong)
 * [Corey](https://github.com/coreyhellwege)
 * [Mat](https://github.com/mathewwatts)
